@@ -24,7 +24,7 @@ heading
 
 #chia netspace
 
-chia farm summary
+chia farm summary | grep -v 'Note: log into your'
 
 heading
 
