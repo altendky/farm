@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for site in 001 002 999; do
+    chia plots add -d /farm/sites/${site}/plots
+done
