@@ -9,10 +9,10 @@ logs=$site/logs
 done=$logs/done
 log=$logs/parallel.$(date --iso-8601=seconds)
 
-scratch_files=$(ls --almost-all /scratch | wc --lines)
+yard_files=$(ls --almost-all /farm/yard/*.tmp | wc --lines)
 
-if [[ "${scratch_files}" != "0" ]]; then
-    echo /scratch is not empty
+if [[ "${yard_files}" != "0" ]]; then
+    echo /farm/yard is not empty
     exit 1
 fi
 

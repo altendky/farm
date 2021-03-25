@@ -7,6 +7,7 @@ logs=$1/logs
 done=$logs/done
 log=$logs/$2.log
 plots=$site/plots
-chia plots create --size 32 --num 1 --buffer 4000 --buckets 128 --num_threads 7 --tmp_dir /farm/yard --final_dir "${plots}" &> "${log}"
+threads=$(grep -c '^processor\s*: ' /proc/cpuinfo)
+chia plots create --size 32 --num 1 --buffer 4000 --buckets 128 --num_threads ${threads} --tmp_dir /farm/yard --final_dir "${plots}" &> "${log}"
 mkdir -p "${done}"
 mv "${log}" "${done}"
