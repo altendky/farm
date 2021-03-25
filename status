@@ -6,7 +6,7 @@ sites=/farm/sites
 
 #date --iso-8601=seconds
 
-df -h /scratch "${sites}"/*
+df -h /farm/yard "${sites}"/*
 
 function heading() {
     printf "\n  ====\n"
