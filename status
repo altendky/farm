@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+
+#set -vx
+
+sites=/farm/sites
+
+#date --iso-8601=seconds
+
+df -h /scratch "${sites}"/*
+
+function heading() {
+    printf "\n  ====\n"
+}
+
+heading
+
+for mount in "${sites}"/*; do
+    drive=$(findmnt --noheadings --output SOURCE ${mount} | sed 's/.$//')
+    echo "    ---- ${drive} -> ${mount}"
+    sudo smartctl -a "${drive}" | grep -E '(Start_Stop_Count|Spin_Retry_Count)'
+done
+
+heading
+
+#chia netspace
+
+chia farm summary
+
+heading
+
+chia wallet show
+
+heading
+
+for log in $sites/*/logs/*.log; do
+    echo "    ---- ${log}"
+    grep -E "(Time for phase|Starting phase 1|Total time)" "${log}"
+done
