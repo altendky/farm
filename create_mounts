@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -euvx
+
+HERE=$(realpath "${BASH_SOURCE%/*}")
+SITES="${HERE}/sites/"
+YARD="${HERE}/yard/"
+
+mkdir --parents "${SITES}/"{001..2} "${SITES}/999" "${YARD}"
