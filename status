@@ -34,6 +34,8 @@ chia wallet show
 heading
 
 for log in "${sites}"/*/logs/*.log "${yard}"/logs/*.log; do
-    echo "    ---- ${log}"
-    grep -E "(Time for phase|Starting phase 1|Total time)" "${log}"
+    if [[ -f "${log}" ]]; then
+        echo "    ---- ${log}"
+        grep -E "(Time for phase|Starting phase 1|Total time)" "${log}"
+    fi
 done
