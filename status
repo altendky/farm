@@ -23,6 +23,10 @@ done
 
 heading
 
+top -b -n 1 | grep -E '(load average|PID USER|chia$)'
+
+heading
+
 #chia netspace
 
 chia farm summary | grep -v 'Note: log into your'
