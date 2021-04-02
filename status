@@ -3,10 +3,11 @@
 #set -vx
 
 sites=/farm/sites
+yard=/farm/yard
 
 #date --iso-8601=seconds
 
-df -h /farm/yard "${sites}"/*
+df -h "${yard}" "${sites}"/*
 
 function heading() {
     printf "\n  ====\n"
@@ -32,7 +33,7 @@ chia wallet show
 
 heading
 
-for log in $sites/*/logs/*.log; do
+for log in "${sites}"/*/logs/*.log "${yard}"/logs/*.log; do
     echo "    ---- ${log}"
     grep -E "(Time for phase|Starting phase 1|Total time)" "${log}"
 done
