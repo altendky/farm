@@ -49,7 +49,7 @@ directories:
         # host, and that the module is configured to match the local path.
         # See code for details.
         archive:
-                rsyncd_module: plots
+                rsyncd_module: sites
                 rsyncd_path: /farm/sites
                 rsyncd_bwlimit: 80000  # Bandwidth limit in KB/s
                 rsyncd_host: chia
