@@ -1,4 +1,5 @@
 /dev/disk/by-uuid/e8a73a03-6045-4459-8c6b-6e2fc1523a42 /farm/sites/001 ext4 defaults,noatime 0 0
 /dev/disk/by-uuid/47d4be11-266c-400f-a3cb-9501b970c875 /farm/sites/002 ext4 defaults,noatime 0 0
 /dev/disk/by-uuid/a9c0321d-7079-4ab5-b0b7-544575c4842a /farm/sites/003 ext4 defaults,noatime 0 0
+/dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/sites/998 ext4 defaults,noatime 0 0
 /dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/sites/999 ext4 defaults,noatime 0 0
