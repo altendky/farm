@@ -14,7 +14,8 @@ directories:
         # If multiple directories share a common prefix, reports will
         # abbreviate and show just the uniquely identifying suffix.
         tmp:
-                - /farm/yard
+#                - /farm/yards/900
+#                - /farm/yards/901
 
         # Optional: Allows overriding some characteristics of certain tmp
         # directories. This contains a map of tmp directory names to
@@ -38,11 +39,8 @@ directories:
         # so writes (plot jobs) and reads (archivals) can be scheduled
         # to minimize IO contention.
         dst:
-                #- /farm/sites/001
-                #- /farm/sites/002
-                #- /farm/sites/003
-                #- /farm/sites/998
-                #- /farm/sites/999
+#                - /farm/wagons/800
+#                - /farm/wagons/801
 
         # Archival configuration.  Optional; if you do not wish to run the
         # archiving operation, comment this section out.
@@ -56,8 +54,8 @@ directories:
                 rsyncd_bwlimit: 80000  # Bandwidth limit in KB/s
                 rsyncd_host: chia
                 rsyncd_user: chia
-                #index: 0
-                #index: 1
+#                index: 0
+#                index: 1
 
 
 # Plotting scheduling parameters
@@ -70,9 +68,9 @@ scheduling:
         tmpdir_stagger_phase_minor: 1
 
         # Don't run more than this many jobs at a time on a single temp dir.
-        #tmpdir_max_jobs: 1
-        #tmpdir_max_jobs: 3
-        #tmpdir_max_jobs: 6
+#        tmpdir_max_jobs: 1
+#        tmpdir_max_jobs: 3
+#        tmpdir_max_jobs: 6
 
         # Don't run any jobs (across all temp dirs) more often than this.
         global_stagger_m: 30
