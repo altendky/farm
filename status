@@ -20,9 +20,19 @@ function heading() {
 heading
 
 for mount in ${all_mounts}; do
-    drive=$(findmnt --noheadings --output SOURCE "${mount}")
-    echo "    ---- ${drive} -> ${mount}"
-    sudo smartctl -a "${drive}" | grep -E '(Start_Stop_Count|Spin_Retry_Count)'
+    partition=$(findmnt --noheadings --output SOURCE "${mount}")
+
+    if [[ "${partition}" ]]; then
+        echo "    ---- ${partition} -> ${mount}"
+
+        # https://unix.stackexchange.com/a/226426
+        part=$(basename ${partition})
+        disk=$(readlink /sys/class/block/$part)
+        disk=${disk%/*}
+        disk=/dev/${disk##*/}
+
+        sudo smartctl -a "${disk}" | grep -E '(Start_Stop_Count|Spin_Retry_Count)'
+    fi
 done
 
 heading
