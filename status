@@ -43,11 +43,7 @@ heading
 
 #chia netspace
 
-chia farm summary | grep -v 'Note: log into your'
-
-heading
-
-chia wallet show
+pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log into your') <(chia wallet show)
 
 heading
 
