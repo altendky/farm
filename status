@@ -51,7 +51,7 @@ chia wallet show
 
 heading
 
-for log in $(ls "${farm}"/logs/*.log | tail -n 5); do
+for log in $(ls "${farm}"/logs/*.log | tail -n 10 | sort --reverse); do
     if [[ -f "${log}" ]]; then
         echo "    ---- ${log}"
         grep -E "(Time for phase|Starting phase 1|Total time)" "${log}"
