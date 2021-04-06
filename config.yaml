@@ -85,7 +85,6 @@ scheduling:
 plotting:
         k: 32
         e: False              # Use -e plotting option
-#        n_threads: 4         # Threads per job
-#        n_threads: 8         # Threads per job
+        n_threads: 4         # Threads per job
         n_buckets: 128       # Number of buckets to split data into
         job_buffer: 4000     # Per job memory
