@@ -54,12 +54,15 @@ directories:
                 rsyncd_bwlimit: 80000  # Bandwidth limit in KB/s
                 rsyncd_host: chia
                 rsyncd_user: chia
-#                index: 0
+                index: 0
 #                index: 1
 
 
 # Plotting scheduling parameters
 scheduling:
+#        tmpdir_stagger_phase_limit: 1
+#        tmpdir_stagger_phase_limit: 2
+
         # Don't run a job on a particular temp dir until all existing jobs
         # have progresed at least this far.  Phase major corresponds to the
         # plot phase, phase minor corresponds to the table or table pair
