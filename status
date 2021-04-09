@@ -37,7 +37,7 @@ done
 
 heading
 
-top -b -n 1 | grep -E '(load average|PID USER|chia$)'
+top -b -c -n 1 -p $(pgrep -d',' -f 'chia plots create') | grep -E '(load average|PID USER|chia)'
 
 heading
 
