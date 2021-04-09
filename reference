@@ -1,1 +1,2 @@
 mkfs.ext4 -v -T largefile4 -m 0 $partition
+mkfs.xfs $partition
