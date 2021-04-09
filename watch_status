@@ -1,1 +1,3 @@
+#!/bin/bash
+
 watch --color --differences --interval 30 ./status
