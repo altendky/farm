@@ -63,7 +63,7 @@ directories:
                 rsyncd_bwlimit: 80000  # Bandwidth limit in KB/s
                 rsyncd_host: chia
                 rsyncd_user: chia
-                index: 0
+#                index: 0
 #                index: 1
 
 
