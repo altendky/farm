@@ -69,16 +69,15 @@ directories:
 
 # Plotting scheduling parameters
 scheduling:
-        tmpdir_stagger_phase_limit: 1
+#        tmpdir_stagger_phase_limit: 1
+#        tmpdir_stagger_phase_limit: 2
 
         # Don't run a job on a particular temp dir until all existing jobs
         # have progresed at least this far.  Phase major corresponds to the
         # plot phase, phase minor corresponds to the table or table pair
         # in sequence.
-#        tmpdir_stagger_phase_major: 2
-#        tmpdir_stagger_phase_minor: 1
-#        tmpdir_stagger_phase_major: 1
-#        tmpdir_stagger_phase_minor: 5
+        tmpdir_stagger_phase_major: 2
+        tmpdir_stagger_phase_minor: 1
 
         # Don't run more than this many jobs at a time on a single temp dir.
 #        tmpdir_max_jobs: 1
