@@ -43,7 +43,7 @@ heading
 
 #chia netspace
 
-pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log into your') <(chia wallet show)
+pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log into your') <(chia wallet show) | grep --color=always -e '^' -e 'Block rewards: [^ ]*'
 
 heading
 
