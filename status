@@ -9,13 +9,17 @@ yards=${farm}/yards
 
 #date --iso-8601=seconds
 
-all_mounts=$(echo "${sites}"/* "${wagons}"/* "${yards}"/*)
-
-df -h ${all_mounts}
-
 function heading() {
     printf "\n  ====\n"
 }
+
+all_mounts=$(echo "${sites}"/* "${wagons}"/* "${yards}"/*)
+
+pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log into your') <(chia wallet show) | grep --color=always -e '^' -e 'Block rewards: [^ ]*'
+
+heading
+
+df -h ${all_mounts}
 
 heading
 
@@ -42,12 +46,6 @@ free --human
 heading
 
 top -b -c -n 1 -p $(pgrep -d',' -f 'chia plots create') | grep -E '(load average|PID USER|chia)'
-
-heading
-
-#chia netspace
-
-pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log into your') <(chia wallet show) | grep --color=always -e '^' -e 'Block rewards: [^ ]*'
 
 heading
 
