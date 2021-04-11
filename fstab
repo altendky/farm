@@ -6,10 +6,10 @@
 /dev/disk/by-uuid/a9c0321d-7079-4ab5-b0b7-544575c4842a /farm/sites/003 ext4 defaults,noatime,nofail 0 0
 
 
-# 1TB Western Digital 2.5" USB platter
-/dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/wagons/800 ext4 defaults,noatime,nofail 0 0
 # 2TB Western Digital 2.5" My Passport Ultra USB platter
-/dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/wagons/801 ext4 defaults,noatime,nofail 0 0
+/dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/wagons/800 ext4 defaults,noatime,nofail 0 0
+# 1TB Western Digital 2.5" USB platter
+/dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/wagons/801 ext4 defaults,noatime,nofail 0 0
 
 
 # 2TB Inland 2280 Premium NVMe SSD
