@@ -50,6 +50,7 @@ directories:
         dst:
 #                - /farm/wagons/800
 #                - /farm/wagons/801
+#                - /farm/wagons/802
 
         # Archival configuration.  Optional; if you do not wish to run the
         # archiving operation, comment this section out.
