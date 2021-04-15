@@ -86,10 +86,12 @@ scheduling:
 #        tmpdir_max_jobs: 1
 #        tmpdir_max_jobs: 3
 #        tmpdir_max_jobs: 6
+#        tmpdir_max_jobs: 7
+#        tmpdir_max_jobs: 8
 #        tmpdir_max_jobs: 11
 
         # Don't run any jobs (across all temp dirs) more often than this.
-        global_stagger_m: 50
+        global_stagger_m: 90
 
         # How often the daemon wakes to consider starting a new plot job
         polling_time_s: 20
@@ -101,6 +103,7 @@ scheduling:
 plotting:
         k: 32
         e: False              # Use -e plotting option
+#        n_threads: 1         # Threads per job
 #        n_threads: 2         # Threads per job
 #        n_threads: 3         # Threads per job
 #        n_threads: 4         # Threads per job
