@@ -51,6 +51,7 @@ directories:
 #                - /farm/wagons/800
 #                - /farm/wagons/801
 #                - /farm/wagons/802
+#                - /farm/wagons/803
 
         # Archival configuration.  Optional; if you do not wish to run the
         # archiving operation, comment this section out.
