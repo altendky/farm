@@ -4,6 +4,8 @@
 /dev/disk/by-uuid/47d4be11-266c-400f-a3cb-9501b970c875 /farm/sites/002 ext4 defaults,noatime,nofail 0 0
 # 12TB Western Digital 3.5" Elements USB platter
 /dev/disk/by-uuid/a9c0321d-7079-4ab5-b0b7-544575c4842a /farm/sites/003 ext4 defaults,noatime,nofail 0 0
+# 12TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/1cf287da-b871-4bb4-9deb-c4aebe767ec2 /farm/sites/004 ext4 defaults,noatime,nofail 0 0
 
 
 # 2TB Western Digital 2.5" My Passport Ultra USB platter
