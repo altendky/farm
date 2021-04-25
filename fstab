@@ -5,7 +5,7 @@
 # 12TB Western Digital 3.5" Elements USB platter
 /dev/disk/by-uuid/a9c0321d-7079-4ab5-b0b7-544575c4842a /farm/sites/003 ext4 defaults,noatime,nofail,ro 0 0
 # 12TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/1cf287da-b871-4bb4-9deb-c4aebe767ec2 /farm/sites/004 ext4 defaults,noatime,nofail 0 0
+/dev/disk/by-uuid/1cf287da-b871-4bb4-9deb-c4aebe767ec2 /farm/sites/004 ext4 defaults,noatime,nofail,ro 0 0
 # 18TB Western Digital 3.5" Elements USB platter
 /dev/disk/by-uuid/40ecbfa3-8d19-4ad9-94aa-fc133ea56c27 /farm/sites/005 ext4 defaults,noatime,nofail 0 0
 
