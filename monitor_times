@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -evx
+
+while true; do
+    grep --color -E '(Total time|Time for)' logs/*
+    sleep 60
+done
