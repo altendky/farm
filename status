@@ -10,22 +10,22 @@ yards=${farm}/yards
 #date --iso-8601=seconds
 
 function heading() {
-    printf "\n  ====\n"
+    printf "\n  ==== $1\n"
 }
 
 all_mounts=$(echo "${sites}"/* "${wagons}"/* "${yards}"/*)
 
 pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log into your') <(chia wallet show) | grep --color=always -e '^' -e 'Block rewards: [^ ]*'
 
-heading
+heading 'Chia logs'
 
 grep --no-filename --recursive -E '(error|plots were eligible for farming .* Time: [^0])' ~/.chia/mainnet/log/
 
-heading
+heading 'Disk usage'
 
 df -h ${all_mounts} | grep -v ' /$' | grep --color=always -P '(^|(99|100)%(?= /farm/[wy]))'
 
-heading
+heading 'Drive health'
 
 for mount in ${all_mounts}; do
     partition=$(findmnt --noheadings --output SOURCE "${mount}")
@@ -43,15 +43,15 @@ for mount in ${all_mounts}; do
     fi
 done
 
-heading
+heading 'Memory usage'
 
 free --human
 
-heading
+heading 'Processes'
 
 top -b -c -n 1 -p $(pgrep -d',' -f 'chia plots create') | grep -E '(load average|PID USER|chia)'
 
-heading
+heading 'Plotting logs'
 
 for log in $(ls "${farm}"/logs/*.log | tail -n 10 | sort --reverse); do
     if [[ -f "${log}" ]]; then
