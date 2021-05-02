@@ -19,7 +19,11 @@ pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log in
 
 heading
 
-df -h ${all_mounts}
+grep --no-filename --recursive -E '(error|plots were eligible for farming .* Time: [^0])' ~/.chia/mainnet/log/
+
+heading
+
+df -h ${all_mounts} | grep -v ' /$'
 
 heading
 
