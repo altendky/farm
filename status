@@ -23,7 +23,7 @@ grep --no-filename --recursive -E '(error|plots were eligible for farming .* Tim
 
 heading
 
-df -h ${all_mounts} | grep -v ' /$' | grep --color=always -P '(^|100%(?= /farm/[wy]))'
+df -h ${all_mounts} | grep -v ' /$' | grep --color=always -P '(^|(99|100)%(?= /farm/[wy]))'
 
 heading
 
