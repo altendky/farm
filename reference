@@ -1,4 +1,4 @@
 mkfs.ext4 -v -T largefile4 -m 0 $partition
 mkfs.xfs $partition
 journalctl -fu rsync.service
-find sites/ -mtime -1 -name '*.plot' -ls 2> /dev/null | wc -l
+find /farm/sites/ -mtime -1 -name '*.plot' -ls 2> /dev/null | wc -l
