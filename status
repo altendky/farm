@@ -19,7 +19,7 @@ pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log in
 
 heading 'Chia logs'
 
-grep --no-filename --recursive -P '(error|plots were eligible for farming .* Time: ([2-9]|[1-9][0-9])\.)' ~/.chia/mainnet/log/
+cat ~/.chia/mainnet/log/* | grep -v -P '(Err\.(DOUBLE_SPEND|MEMPOOL_NOT_INITIALIZED)|COIN_AMOUNT_NEGATIVE|Consensus error 124)' | grep -P '(error|plots were eligible for farming .* Time: ([2-9]|[1-9][0-9])\.)'
 
 heading 'Disk usage'
 
@@ -27,21 +27,21 @@ df -h ${all_mounts} | grep -v ' /$' | grep --color=always -P '(^|(99|100)%(?= /f
 
 heading 'Drive health'
 
-for mount in ${all_mounts}; do
-    partition=$(findmnt --noheadings --output SOURCE "${mount}")
-
-    if [[ "${partition}" ]]; then
-        echo "    ---- ${partition} -> ${mount}"
-
-        # https://unix.stackexchange.com/a/226426
-        part=$(basename ${partition})
-        disk=$(readlink /sys/class/block/$part)
-        disk=${disk%/*}
-        disk=/dev/${disk##*/}
-
-        sudo smartctl -a "${disk}" | grep -E '(Start_Stop_Count|Spin_Retry_Count)'
-    fi
-done
+#for mount in ${all_mounts}; do
+#    partition=$(findmnt --noheadings --output SOURCE "${mount}")
+#
+#    if [[ "${partition}" ]]; then
+#        echo "    ---- ${partition} -> ${mount}"
+#
+#        # https://unix.stackexchange.com/a/226426
+#        part=$(basename ${partition})
+#        disk=$(readlink /sys/class/block/$part)
+#        disk=${disk%/*}
+#        disk=/dev/${disk##*/}
+#
+#        sudo smartctl -a "${disk}" | grep -E '(Start_Stop_Count|Spin_Retry_Count)'
+#    fi
+#done
 
 heading 'Memory usage'
 
