@@ -2,3 +2,15 @@ mkfs.ext4 -v -T largefile4 -m 0 $partition
 mkfs.xfs $partition
 journalctl -fu rsync.service
 find /farm/sites/ -mtime -1 -name '*.plot' -ls 2> /dev/null | wc -l
+chia show -c | awk '
+/Connections|Type|FARMER|WALLET/ { print }
+/SB Height/ {ph[$3] += 1}
+END {
+        msg="Peer heights: "
+        for (h in ph) {
+          msg = msg h ":" ph[h] " "
+        }
+        print msg
+}
+'
+for n in (chia show -c | grep -B 1 255206 | sed 's/.*\([0-9a-f]\{8\}\)\.\.\..*/\1/' | grep -v -e '--'| sort --unique); chia show --remove-connection $n; end
