@@ -11,19 +11,18 @@
 # 14TB Western Digital 3.5" Elements USB platter
 /dev/disk/by-uuid/3e4df794-7aaf-4608-8704-cf0327a16919 /farm/sites/006 ext4 defaults,noatime,nofail,ro 0 0
 # 14TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/4d609742-923d-45a6-beba-47cd8e1a3d65 /farm/sites/007 ext4 defaults,noatime,nofail 0 0
+/dev/disk/by-uuid/4d609742-923d-45a6-beba-47cd8e1a3d65 /farm/sites/007 ext4 defaults,noatime,nofail,ro 0 0
 # 10TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/bc7d2cd7-3c65-4848-b7ed-f7990c32491c /farm/sites/008 ext4 defaults,noatime,nofail 0 0
+/dev/disk/by-uuid/bc7d2cd7-3c65-4848-b7ed-f7990c32491c /farm/sites/008 ext4 defaults,noatime,nofail,ro 0 0
 # 10TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/c3aec3ab-8396-4d33-ae60-40b2abf1e4f9 /farm/sites/009 ext4 defaults,noatime,nofail 0 0
+/dev/disk/by-uuid/c3aec3ab-8396-4d33-ae60-40b2abf1e4f9 /farm/sites/009 ext4 defaults,noatime,nofail,ro 0 0
 # 3TB something something 3.5" USB platter
-/dev/disk/by-uuid/93c8a5ba-96d3-4fe9-b659-03b4bb1e8f26 /farm/sites/010 ext4 defaults,noatime,nofail 0 0
-
-
+/dev/disk/by-uuid/93c8a5ba-96d3-4fe9-b659-03b4bb1e8f26 /farm/sites/010 ext4 defaults,noatime,nofail,ro 0 0
 # 2TB Western Digital 2.5" My Passport Ultra USB platter
-/dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/wagons/800 ext4 defaults,noatime,nofail 0 0
+/dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/sites/011 ext4 defaults,noatime,nofail 0 0
 # 1TB Western Digital 2.5" USB platter
-/dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/wagons/801 ext4 defaults,noatime,nofail 0 0
+/dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/sites/012 ext4 defaults,noatime,nofail 0 0
+
 # 1TB Western Digital 2.5" USB platter (bare internal)
 /dev/disk/by-uuid/96e0c15b-9988-45bc-a609-b7123580a516 /farm/wagons/803 ext4 defaults,noatime,nofail 0 0
 
