@@ -7,4 +7,4 @@ SITES="${HERE}/sites/"
 YARDS="${HERE}/yards/"
 WAGONS="${HERE}/wagons/"
 
-mkdir --parents "${SITES}/"{001..12} "${WAGONS}/"{800..803} "${YARDS}/"{900..902}
+mkdir --parents "${SITES}/"{001..13} "${WAGONS}/"{800..803} "${YARDS}/"{900..902}

@@ -22,6 +22,8 @@
 /dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/sites/011 ext4 defaults,noatime,nofail 0 0
 # 1TB Western Digital 2.5" USB platter
 /dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/sites/012 ext4 defaults,noatime,nofail 0 0
+# 10TB Western Digital Red Plus 3.5" internal platter
+/dev/disk/by-uuid/11a21d35-475e-47c4-8bb4-e3c5ce143ed4 /farm/sites/013 ext4 defaults,noatime,nofail 0 0
 
 # 1TB Western Digital 2.5" USB platter (bare internal)
 /dev/disk/by-uuid/96e0c15b-9988-45bc-a609-b7123580a516 /farm/wagons/803 ext4 defaults,noatime,nofail 0 0
