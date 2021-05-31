@@ -53,7 +53,7 @@ top -b -c -n 1 -p $(pgrep -d',' -f 'chia plots create') | grep -E '(load average
 
 heading 'Plotting logs'
 
-for log in $(ls "${farm}"/logs/*.log | tail -n 10 | sort --reverse); do
+for log in $(ls "${farm}"/logs/plots/*.log | tail -n 10 | sort --reverse); do
     if [[ -f "${log}" ]]; then
         echo "    ---- ${log}"
         grep -E "(Time for phase|Starting phase 1|Total time)" "${log}"
