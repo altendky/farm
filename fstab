@@ -16,29 +16,63 @@
 /dev/disk/by-uuid/bc7d2cd7-3c65-4848-b7ed-f7990c32491c /farm/sites/008 ext4 defaults,noatime,nofail,ro 0 0
 # 10TB Western Digital 3.5" Elements USB platter
 /dev/disk/by-uuid/c3aec3ab-8396-4d33-ae60-40b2abf1e4f9 /farm/sites/009 ext4 defaults,noatime,nofail,ro 0 0
-# 3TB something something 3.5" USB platter
+# 3TB Seagate Barracuda 3.5" USB platter s/n Z1F3ADNH
 /dev/disk/by-uuid/93c8a5ba-96d3-4fe9-b659-03b4bb1e8f26 /farm/sites/010 ext4 defaults,noatime,nofail,ro 0 0
 # 2TB Western Digital 2.5" My Passport Ultra USB platter
 /dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/sites/011 ext4 defaults,noatime,nofail,ro 0 0
 # 1TB Western Digital 2.5" USB platter
 /dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/sites/012 ext4 defaults,noatime,nofail,ro 0 0
-# 10TB Western Digital Red Plus 3.5" internal platter
+# 10TB Western Digital Red Plus 3.5" internal platter s/n VCHN4P1P
 /dev/disk/by-uuid/11a21d35-475e-47c4-8bb4-e3c5ce143ed4 /farm/sites/013 ext4 defaults,noatime,nofail,ro 0 0
+# 4TB HGST 3.5" internal platter s/n NHGALX2Y
+/dev/disk/by-uuid/62f67cea-7188-403b-8d43-21c40c1b4704 /farm/sites/014 ext4 defaults,noatime,nofail,rw 0 0
+# 4TB HGST 3.5" internal platter s/n NHG9TLZY
+/dev/disk/by-uuid/85c57d03-b8d4-4c50-b493-be92737c0b77 /farm/sites/015 ext4 defaults,noatime,nofail,rw 0 0
+# 4TB HGST 3.5" internal platter s/n NHGAX5GY
+/dev/disk/by-uuid/23eac117-1b30-49a6-ab44-999fbe7a9f9c /farm/sites/016 ext4 defaults,noatime,nofail,rw 0 0
+# 4TB HGST 3.5" internal platter s/n NHGARU7Y
+/dev/disk/by-uuid/be9a1859-e46f-47a8-99a2-f3f3a5f6a11b /farm/sites/017 ext4 defaults,noatime,nofail,rw 0 0
+# 4TB HGST 3.5" internal platter s/n NHGAU1ZY
+/dev/disk/by-uuid/2f5b5f81-04fe-4986-bad9-80f7f3d89760 /farm/sites/018 ext4 defaults,noatime,nofail,rw 0 0
+# 4TB HGST 3.5" internal platter s/n NHGAEJKY
+/dev/disk/by-uuid/7c4e4c16-048b-4f8c-a92a-4ab05f9f7579 /farm/sites/019 ext4 defaults,noatime,nofail,rw 0 0
+# 4TB HGST 3.5" internal platter s/n NHGA1EZY
+/dev/disk/by-uuid/931da9d4-cb29-4334-8973-c1b19557a2c3 /farm/sites/020 ext4 defaults,noatime,nofail,rw 0 0
+# 4TB HGST 3.5" internal platter s/n NHGARGUY
+/dev/disk/by-uuid/2f6dbbd4-31d0-4379-9793-38f6b9241a4b /farm/sites/021 ext4 defaults,noatime,nofail,rw 0 0
+
 
 # 12TB Seagate Backup Plus Hub 3.5" USB platter
-/dev/disk/by-uuid/22FC6FBEFC6F8B3D /farm/them/700 auto defaults,noatime,nofail 0 0
+#/dev/disk/by-uuid/22FC6FBEFC6F8B3D /farm/them/700 auto defaults,noatime,nofail 0 0
 
 # 1TB Western Digital 2.5" USB platter (bare internal)
 /dev/disk/by-uuid/96e0c15b-9988-45bc-a609-b7123580a516 /farm/wagons/803 ext4 defaults,noatime,nofail 0 0
 
+# 2x 500GB Western Digital WD Black SN750 NVMe SSD
+/dev/disk/by-uuid/7a3490e2-1d55-449a-be47-473fd30e811a /farm/wagons/806 xfs discard,noatime,nofail 0 0
+# above is raid of below
+# 500GB Western Digital WD Black SN750 NVMe SSD s/n 2017AE800817
+#/dev/disk/by-uuid/ /farm/wagons/804 ext4 defaults,noatime,nofail 0 0
+# 500GB Western Digital WD Black SN750 NVMe SSD s/n 2017AE802258
+#/dev/disk/by-uuid/ /farm/wagons/805 ext4 defaults,noatime,nofail 0 0
 
-# 2TB Inland 2280 Premium NVMe SSD
+
+# 2TB Inland 2280 Premium NVMe SSD s/n 20121420480440
 /dev/disk/by-uuid/f29267f6-d245-4d9f-ae62-d2b1782a1124 /farm/yards/900 xfs discard,noatime,nofail 0 0
-# 2TB Inland 2280 Premium NVMe SSD
-/dev/disk/by-uuid/d15d0843-a535-429c-b8b8-99e3169f3374 /farm/yards/902 xfs discard,noatime,nofail 0 0
-# 1TB Western Digital 2280 Blue SN550 NVMe SSD
+# 1TB Western Digital 2280 Blue SN550 NVMe SSD s/n 201970801167
 /dev/disk/by-uuid/9a029596-a9f1-4c33-b195-169a290a525a /farm/yards/901 xfs discard,noatime,nofail 0 0
-# 1TB Inland 2280 Premium NVMe SSD
-/dev/disk/by-uuid/aa97bae6-48e7-42ab-b307-c5a00ec39640 /farm/yards/903 xfs discard,noatime,nofail 0 0
-# 1TB Inland 2280 Premium NVMe SSD
-/dev/disk/by-uuid/4a234dde-160c-4daf-8618-d9f1072b3aaf /farm/yards/904 xfs discard,noatime,nofail 0 0
+# 2TB Inland 2280 Premium NVMe SSD s/n 21033120480086
+/dev/disk/by-uuid/d15d0843-a535-429c-b8b8-99e3169f3374 /farm/yards/902 xfs discard,noatime,nofail 0 0
+
+
+# 4x 1TB Inland 2280 Premium NVMe SSD
+/dev/disk/by-uuid/9312512e-2e23-45e9-9e5c-96d4508def65 /farm/yards/907 xfs discard,noatime,nofail 0 0
+# above is raid of below
+# 1TB Inland 2280 Premium NVMe SSD s/n 21042310240103
+#/dev/disk/by-uuid/aa97bae6-48e7-42ab-b307-c5a00ec39640 /farm/yards/903 xfs discard,noatime,nofail 0 0
+# 1TB Inland 2280 Premium NVMe SSD s/n 21042310240118
+#/dev/disk/by-uuid/4a234dde-160c-4daf-8618-d9f1072b3aaf /farm/yards/904 xfs discard,noatime,nofail 0 0
+# 1TB Inland 2280 Premium NVMe SSD s/n 21050610240921
+#/dev/disk/by-uuid/ /farm/yards/905 xfs discard,noatime,nofail 0 0
+# 1TB Inland 2280 Premium NVMe SSD s/n 21050610240939
+#/dev/disk/by-uuid/ /farm/yards/906 xfs discard,noatime,nofail 0 0
