@@ -1,5 +1,5 @@
 #!/bin/bash
 
-for plots in /farm/{sites/{001..21}/{,plots,original,pool},yards/{900..907}}; do
+for plots in /farm/{sites/{001..21}/{,plots,original,pool},yards/{900..908}}; do
     chia plots add -d "${plots}"
 done

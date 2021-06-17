@@ -48,14 +48,6 @@
 # 1TB Western Digital 2.5" USB platter (bare internal)
 /dev/disk/by-uuid/96e0c15b-9988-45bc-a609-b7123580a516 /farm/wagons/803 ext4 defaults,noatime,nofail 0 0
 
-# 2x 500GB Western Digital WD Black SN750 NVMe SSD
-/dev/disk/by-uuid/7a3490e2-1d55-449a-be47-473fd30e811a /farm/wagons/806 xfs discard,noatime,nofail 0 0
-# above is raid of below
-# 500GB Western Digital WD Black SN750 NVMe SSD s/n 2017AE800817
-#/dev/disk/by-uuid/ /farm/wagons/804 ext4 defaults,noatime,nofail 0 0
-# 500GB Western Digital WD Black SN750 NVMe SSD s/n 2017AE802258
-#/dev/disk/by-uuid/ /farm/wagons/805 ext4 defaults,noatime,nofail 0 0
-
 
 # 2TB Inland 2280 Premium NVMe SSD s/n 20121420480440
 /dev/disk/by-uuid/f29267f6-d245-4d9f-ae62-d2b1782a1124 /farm/yards/900 xfs discard,noatime,nofail 0 0
@@ -76,3 +68,11 @@
 #/dev/disk/by-uuid/ /farm/yards/905 xfs discard,noatime,nofail 0 0
 # 1TB Inland 2280 Premium NVMe SSD s/n 21050610240939
 #/dev/disk/by-uuid/ /farm/yards/906 xfs discard,noatime,nofail 0 0
+
+# 2x 500GB Western Digital WD Black SN750 NVMe SSD
+/dev/disk/by-uuid/7a3490e2-1d55-449a-be47-473fd30e811a /farm/yards/908 xfs discard,noatime,nofail 0 0
+# above is raid of below
+# 500GB Western Digital WD Black SN750 NVMe SSD s/n 2017AE800817
+#/dev/disk/by-uuid/ /farm/wagons/804 ext4 defaults,noatime,nofail 0 0
+# 500GB Western Digital WD Black SN750 NVMe SSD s/n 2017AE802258
+#/dev/disk/by-uuid/ /farm/wagons/805 ext4 defaults,noatime,nofail 0 0
