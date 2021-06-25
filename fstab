@@ -16,30 +16,44 @@
 /dev/disk/by-uuid/bc7d2cd7-3c65-4848-b7ed-f7990c32491c /farm/sites/008 ext4 defaults,noatime,nofail,ro 0 0
 # 10TB Western Digital 3.5" Elements USB platter
 /dev/disk/by-uuid/c3aec3ab-8396-4d33-ae60-40b2abf1e4f9 /farm/sites/009 ext4 defaults,noatime,nofail,ro 0 0
-# 3TB Seagate Barracuda 3.5" USB platter s/n Z1F3ADNH
-/dev/disk/by-uuid/93c8a5ba-96d3-4fe9-b659-03b4bb1e8f26 /farm/sites/010 ext4 defaults,noatime,nofail,ro 0 0
-# 2TB Western Digital 2.5" My Passport Ultra USB platter
-/dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/sites/011 ext4 defaults,noatime,nofail,ro 0 0
-# 1TB Western Digital 2.5" USB platter
-/dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/sites/012 ext4 defaults,noatime,nofail,ro 0 0
 # 10TB Western Digital Red Plus 3.5" internal platter s/n VCHN4P1P
 /dev/disk/by-uuid/11a21d35-475e-47c4-8bb4-e3c5ce143ed4 /farm/sites/013 ext4 defaults,noatime,nofail,ro 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3WHVZLDJ
+/dev/disk/by-uuid/27f716cd-a813-46e5-9741-4cf8f2d30d9c /farm/sites/022 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG3NM8E
+/dev/disk/by-uuid/d77ad5bb-1dd3-4ccc-8470-67ff7c53b852 /farm/sites/023 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG3LYVE
+/dev/disk/by-uuid/9a20e1ad-8812-4a11-9c34-1fd334073213 /farm/sites/024 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG43ENF
+/dev/disk/by-uuid/eb20b4b1-a98e-49b8-89c4-a2435ffd6aa1 /farm/sites/025 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG43P0F
+/dev/disk/by-uuid/2afd9a80-1e83-4759-813e-5957d5326ab2 /farm/sites/026 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG3DGUE
+/dev/disk/by-uuid/3ff85c9b-2c97-4970-91d3-7dde1cb36f68 /farm/sites/027 ext4 defaults,noatime,nofail,rw 0 0
+
+
+# 3TB Seagate Barracuda 3.5" USB platter s/n Z1F3ADNH
+/dev/disk/by-uuid/93c8a5ba-96d3-4fe9-b659-03b4bb1e8f26 /farm/back40/010 ext4 defaults,noatime,nofail,rw 0 0
+# 2TB Western Digital 2.5" My Passport Ultra USB platter
+/dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/back40/011 ext4 defaults,noatime,nofail,rw 0 0
+# 1TB Western Digital 2.5" USB platter
+/dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/back40/012 ext4 defaults,noatime,nofail,rw 0 0
 # 4TB HGST 3.5" internal platter s/n NHGALX2Y
-/dev/disk/by-uuid/62f67cea-7188-403b-8d43-21c40c1b4704 /farm/sites/014 ext4 defaults,noatime,nofail,rw 0 0
+/dev/disk/by-uuid/62f67cea-7188-403b-8d43-21c40c1b4704 /farm/back40/014 ext4 defaults,noatime,nofail,rw 0 0
 # 4TB HGST 3.5" internal platter s/n NHG9TLZY
-/dev/disk/by-uuid/85c57d03-b8d4-4c50-b493-be92737c0b77 /farm/sites/015 ext4 defaults,noatime,nofail,rw 0 0
+/dev/disk/by-uuid/85c57d03-b8d4-4c50-b493-be92737c0b77 /farm/back40/015 ext4 defaults,noatime,nofail,rw 0 0
 # 4TB HGST 3.5" internal platter s/n NHGAX5GY
-/dev/disk/by-uuid/23eac117-1b30-49a6-ab44-999fbe7a9f9c /farm/sites/016 ext4 defaults,noatime,nofail,rw 0 0
+/dev/disk/by-uuid/23eac117-1b30-49a6-ab44-999fbe7a9f9c /farm/back40/016 ext4 defaults,noatime,nofail,rw 0 0
 # 4TB HGST 3.5" internal platter s/n NHGARU7Y
-/dev/disk/by-uuid/be9a1859-e46f-47a8-99a2-f3f3a5f6a11b /farm/sites/017 ext4 defaults,noatime,nofail,rw 0 0
+/dev/disk/by-uuid/be9a1859-e46f-47a8-99a2-f3f3a5f6a11b /farm/back40/017 ext4 defaults,noatime,nofail,rw 0 0
 # 4TB HGST 3.5" internal platter s/n NHGAU1ZY
-/dev/disk/by-uuid/2f5b5f81-04fe-4986-bad9-80f7f3d89760 /farm/sites/018 ext4 defaults,noatime,nofail,rw 0 0
+/dev/disk/by-uuid/2f5b5f81-04fe-4986-bad9-80f7f3d89760 /farm/back40/018 ext4 defaults,noatime,nofail,rw 0 0
 # 4TB HGST 3.5" internal platter s/n NHGAEJKY
-/dev/disk/by-uuid/7c4e4c16-048b-4f8c-a92a-4ab05f9f7579 /farm/sites/019 ext4 defaults,noatime,nofail,rw 0 0
+/dev/disk/by-uuid/7c4e4c16-048b-4f8c-a92a-4ab05f9f7579 /farm/back40/019 ext4 defaults,noatime,nofail,rw 0 0
 # 4TB HGST 3.5" internal platter s/n NHGA1EZY
-/dev/disk/by-uuid/931da9d4-cb29-4334-8973-c1b19557a2c3 /farm/sites/020 ext4 defaults,noatime,nofail,rw 0 0
+/dev/disk/by-uuid/931da9d4-cb29-4334-8973-c1b19557a2c3 /farm/back40/020 ext4 defaults,noatime,nofail,rw 0 0
 # 4TB HGST 3.5" internal platter s/n NHGARGUY
-/dev/disk/by-uuid/2f6dbbd4-31d0-4379-9793-38f6b9241a4b /farm/sites/021 ext4 defaults,noatime,nofail,rw 0 0
+/dev/disk/by-uuid/2f6dbbd4-31d0-4379-9793-38f6b9241a4b /farm/back40/021 ext4 defaults,noatime,nofail,rw 0 0
 
 
 # 12TB Seagate Backup Plus Hub 3.5" USB platter

@@ -4,7 +4,8 @@ set -euvx
 
 HERE=$(realpath "${BASH_SOURCE%/*}")
 SITES="${HERE}/sites/"
+BACK40="${HERE}/back40/"
 YARDS="${HERE}/yards/"
 WAGONS="${HERE}/wagons/"
 
-mkdir --parents "${SITES}/"{001..21} "${WAGONS}/"{800..806} "${YARDS}/"{900..908}
+mkdir --parents "${SITES}/"{001..37} "${BACK40}/"{001..37} "${WAGONS}/"{800..806} "${YARDS}/"{900..908}
