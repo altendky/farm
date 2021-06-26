@@ -34,6 +34,22 @@
 /dev/disk/by-uuid/c315945f-4977-45c0-8206-24eab9d51535 /farm/sites/028 ext4 defaults,noatime,nofail,rw 0 0
 # 18TB WD DC HC550 3.5" internal platter s/n 3GG3NT7E
 /dev/disk/by-uuid/b10581a0-14f4-43e8-81c1-251178fdab0e /farm/sites/029 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG38VDE
+/dev/disk/by-uuid/4e08ccde-fc2d-4ca2-aceb-99437e787d24 /farm/sites/030 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3WHS6GXK
+/dev/disk/by-uuid/c070ba60-8e14-42fe-ad7e-e771f6a4561b /farm/sites/031 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3WJA258J
+/dev/disk/by-uuid/15e13987-70e3-4258-80ac-2a85c3263f59 /farm/sites/032 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG3NSDE
+/dev/disk/by-uuid/bce1d367-7038-425f-92ca-9338f57df246 /farm/sites/033 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG334EE
+/dev/disk/by-uuid/fa20c9c5-cbe7-4645-b522-ba7c964e151b /farm/sites/034 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3WKHVXYK
+/dev/disk/by-uuid/9b59b132-1846-4040-a44f-613d07a115aa /farm/sites/035 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG42N0E
+/dev/disk/by-uuid/3a4067a2-5ab2-4274-b838-6e5eb7e07d4c /farm/sites/036 ext4 defaults,noatime,nofail,rw 0 0
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG32ATE
+/dev/disk/by-uuid/fb7aa9aa-49d9-484d-a9aa-fbe31b35c5e9 /farm/sites/037 ext4 defaults,noatime,nofail,rw 0 0
 
 
 # 3TB Seagate Barracuda 3.5" USB platter s/n Z1F3ADNH
