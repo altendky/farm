@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#set -vx
+
+farm=/farm
+sites=${farm}/sites
+wagons=${farm}/wagons
+yards=${farm}/yards
+
+all_mounts=$(echo "${sites}"/* "${wagons}"/* "${yards}"/*)
+
+for mount in ${all_mounts}; do
+    partition=$(findmnt --noheadings --output SOURCE "${mount}")
+
+    if [[ "${partition}" ]]; then
+        echo "    ---- ${partition} -> ${mount}"
+
+        # https://unix.stackexchange.com/a/226426
+        part=$(basename ${partition})
+        disk=$(readlink /sys/class/block/$part)
+        disk=${disk%/*}
+        disk=/dev/${disk##*/}
+
+        sudo smartctl -a "${disk}" | grep -E '(Start_Stop_Count|Spin_Retry_Count|Power-Off_Retract_Count)'
+    fi
+done
