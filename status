@@ -15,7 +15,7 @@ function heading() {
 
 all_mounts=$(echo "${sites}"/* "${wagons}"/* "${yards}"/*)
 
-pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log into your') <(chia wallet show) | grep --color=always -e '^' -e 'Block rewards: [^ ]*'
+pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log into your') <(chia wallet show; chia plotnft show | grep -E '(Current difficulty|Points balance):') | grep --color=always -e '^' -e 'Block rewards: [^ ]*'
 
 heading 'Chia logs'
 
