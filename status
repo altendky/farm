@@ -19,7 +19,7 @@ pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log in
 
 heading 'Chia logs'
 
-cat ~/.chia/mainnet/log/debug.log{.1,} | grep -v -P '(Err\.(DOUBLE_SPEND|MEMPOOL_NOT_INITIALIZED)|COIN_AMOUNT_NEGATIVE|Consensus error 124)' | grep -P '(error|Looking up qualities|Found [1-9]+ proofs)' | tail -n 10 | grep --color=always -P '(?<=Found )[1-9+](?= proofs)'
+cat ~/.chia/mainnet/log/debug.log{.1,} | grep -v -P '(Err\.(DOUBLE_SPEND|MEMPOOL_NOT_INITIALIZED)|COIN_AMOUNT_NEGATIVE|Consensus error 124)' | grep -P '(error|Looking up qualities|Found [1-9]+ proofs)' | tail -n 10 | grep --color=always -P '(^|Found | proofs)'
 
 heading 'Disk usage'
 
