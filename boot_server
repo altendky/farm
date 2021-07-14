@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# https://github.com/rjsears/chia_plot_manager/blob/7ad9b4790a8322e24cac4763d8707e8fd0c3eb30/extras/set_cpu_to_performance.sh
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+for d in /sys/devices/system/cpu/cpu*/cpufreq; do
+    echo "performance" > $d/scaling_governor
+    #echo "1200000" > $d/scaling_min_freq
+done
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+
+for d in $(df | grep ' /farm/sites/' | sed -E 's;^/dev/([a-z]+).*;\1;'); do
+    echo 'bfq' | sudo tee /sys/block/$d/queue/scheduler
+done
