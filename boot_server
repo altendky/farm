@@ -9,5 +9,14 @@ done
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
 for d in $(df | grep ' /farm/sites/' | sed -E 's;^/dev/([a-z]+).*;\1;'); do
-    echo 'bfq' | sudo tee /sys/block/$d/queue/scheduler
+    echo 'bfq' | tee /sys/block/$d/queue/scheduler
 done
+
+#mount -t tmpfs -o size=220G tmpfs /farm/porches/700
+for node in 0 1; do
+    mount -t tmpfs -o size=110G,mpol=bind:${node},noatime,nodiratime tmpfs /farm/porches/70${node}
+done
+
+mkdir -p /var/lib/prometheus/node-exporter
+sudo chown altendky.altendky /var/lib/prometheus/node-exporter
+#prometheus-node-exporter --collector.textfile.directory="/tmp/metrics"
