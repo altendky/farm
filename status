@@ -17,8 +17,8 @@ all_mounts=$(echo "${sites}"/* "${wagons}"/* "${yards}"/*)
 
 pr --merge --omit-header --width 100 <(chia farm summary | grep -v 'Note: log into your') <(chia wallet show; chia plotnft show | grep -E '(Current difficulty|Points balance):') | grep --color=always -e '^' -e 'Block rewards: [^ ]*'
 
-echo Portable plots: $(find /farm/sites -name '*.plot' | grep 'pool.' | wc -l) '('$(du -ach $(find /farm/sites -name '*.plot' | grep 'pool.') | tail -n 1 | sed 's/\t.*//')')'
-echo Plots in the past day: $(find /farm/logs/plots/ -type f -mtime 0 -size +3000c -printf '.' | wc -c) / $(find /farm/sites/ -mtime  0 -name '*.plot' -printf '.' 2> /dev/null | wc -c)
+echo Portable plots: $(find /farm/sites -name '*.plot' 2> /dev/null | grep 'pool\.xch' | wc -l) '('$(du -ach $(find /farm/sites -name '*.plot' 2> /dev/null | grep 'pool\.xch') 2> /dev/null | tail -n 1 | sed 's/\t.*//')')'
+echo Plots in the past day: $(find /farm/logs/plots/ -type f -mtime 0 -size +3000c -printf '.' 2> /dev/null | wc -c) / $(find /farm/sites/ -mtime  0 -name '*.plot' -printf '.' 2> /dev/null | wc -c)
 
 heading 'Chia logs'
 
