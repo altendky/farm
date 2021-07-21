@@ -15,6 +15,8 @@ done
 #mount -t tmpfs -o size=220G tmpfs /farm/porches/700
 for node in 0 1; do
     mount -t tmpfs -o size=110G,mpol=bind:${node},noatime,nodiratime tmpfs /farm/porches/70${node}
+    #mount -t ramfs -o size=110G,mpol=bind:${node},noatime,nodiratime ramfs /farm/porches/70${node}
+    #chown -R altendky.altendky /farm/porches/70${node}
 done
 
 mkdir -p /var/lib/prometheus/node-exporter
