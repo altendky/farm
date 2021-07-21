@@ -20,5 +20,5 @@ for node in 0 1; do
 done
 
 mkdir -p /var/lib/prometheus/node-exporter
-sudo chown altendky.altendky /var/lib/prometheus/node-exporter
+chown altendky.altendky /var/lib/prometheus/node-exporter
 #prometheus-node-exporter --collector.textfile.directory="/tmp/metrics"
