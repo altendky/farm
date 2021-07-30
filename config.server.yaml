@@ -40,9 +40,9 @@ directories:
         # Optional: tmp2 directory.  If specified, will be passed to
         # chia plots create as -2.  Only one tmp2 directory is supported.
         # tmp2: /farm/yards/908
-        tmp2:
-        - /farm/porches/701
-        - /farm/porches/700
+        tmp2: /farm/porches/700
+#        - /farm/porches/700
+#        - /farm/porches/701
 
         # One or more directories; the scheduler will use all of them.
         # These again are presumed to be on independent physical devices,
@@ -85,43 +85,6 @@ archiving:
 #    command: rsync
 #    site_root: /farm/sites
 #    url_root: rsync://altendky@server:12000/sites
-#  target_definitions:
-#    local_rsync:
-#      # env:
-#      #   command: rsync
-#      #   site_root: /farm/sites
-#
-#      # The disk space script must return a line for each directory
-#      # to consider archiving to with the following form.
-#      #
-#      #   /some/path:1000000000000
-#      #
-#      # That line tells plotman that it should consider archiving
-#      # plots to files at paths such as /some/path/theplotid.plot and
-#      # that there is 1TB of space available for use in that
-#      # directory.
-#      disk_space_script: |
-#        #!/bin/bash
-#        df -BK | grep " ${site_root}/" | awk '{ gsub(/K$/,"",$4); print $6 ":" $4*1024 }'
-#      transfer_script: |
-#        #!/bin/bash
-#        "${command}" --preallocate --remove-source-files --skip-compress plot --whole-file "${source}" "${destination}"
-#      transfer_process_name: "{command}"
-#      transfer_process_argument_prefix: "{site_root}"
-#    rsyncd:
-#      # env:
-#      #   command: rsync
-#      #   site_root: /farm/sites
-#      #   url_root: rsync://altendky@server:12000/sites
-#      disk_space_script: |
-#        #!/bin/bash
-#        ssh altendky@server "df -BK | grep \" ${site_root}/\" | awk '{ gsub(/K\$/,\"\",\$4); print \$6 \":\" \$4*1024 }'"
-#      transfer_script: |
-#        #!/bin/bash
-#        relative_path=$(realpath --relative-to="${site_root}" "${destination}")
-#        "${command}" --bwlimit=80000 --preallocate --remove-source-files --skip-compress plot --whole-file "${source}" "${url_root}/${relative_path}"
-#      transfer_process_name: "{command}"
-#      transfer_process_argument_prefix: "{url_root}"
 
 # Plotting scheduling parameters
 scheduling:
@@ -129,13 +92,13 @@ scheduling:
 #        tmpdir_stagger_phase_limit: 2
 #        tmpdir_stagger_phase_limit: 3
 #        tmpdir_stagger_phase_limit: 4
-        tmpdir_stagger_phase_limit: 99
+        tmpdir_stagger_phase_limit: 1
 
         # Don't run a job on a particular temp dir until all existing jobs
         # have progresed at least this far.  Phase major corresponds to the
         # plot phase, phase minor corresponds to the table or table pair
         # in sequence.
-        tmpdir_stagger_phase_major: 4
+        tmpdir_stagger_phase_major: 2
         tmpdir_stagger_phase_minor: 0
 
         # Don't run more than this many jobs at a time on a single temp dir.
@@ -148,12 +111,12 @@ scheduling:
 
         # Don't run any jobs (across all temp dirs) more often than this.
         # was 27
-        global_stagger_m: 27
+        global_stagger_m: 0
 
         # How often the daemon wakes to consider starting a new plot job
         polling_time_s: 20
 
-        global_max_jobs: 2
+        global_max_jobs: 4
 
         # Optional: Allows overriding some characteristics of certain tmp
         # directories. This contains a map of tmp directory names to
@@ -202,4 +165,4 @@ plotting:
         job_buffer: 6000     # Per job memory
     madmax:
         executable: /farm/chia-plotter/build/chia_plot
-        n_threads: 9
+        n_threads: 16

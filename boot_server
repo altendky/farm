@@ -12,12 +12,21 @@ for d in $(df | grep ' /farm/sites/' | sed -E 's;^/dev/([a-z]+).*;\1;'); do
     echo 'bfq' | tee /sys/block/$d/queue/scheduler
 done
 
-#mount -t tmpfs -o size=220G tmpfs /farm/porches/700
-for node in 0 1; do
-    mount -t tmpfs -o size=110G,mpol=bind:${node},noatime,nodiratime tmpfs /farm/porches/70${node}
-    #mount -t ramfs -o size=110G,mpol=bind:${node},noatime,nodiratime ramfs /farm/porches/70${node}
-    #chown -R altendky.altendky /farm/porches/70${node}
-done
+SWAPFILE=/farm/yards/907/swapfile
+rm "${SWAPFILE}"
+fallocate -l 330G "${SWAPFILE}"
+chmod 600 "${SWAPFILE}"
+mkswap "${SWAPFILE}"
+swapon "${SWAPFILE}"
+sysctl vm.swappiness=0
+
+
+mount -t tmpfs -o size=330G tmpfs /farm/porches/700
+#for node in 0 1; do
+#    mount -t tmpfs -o size=110G,mpol=bind:${node},noatime,nodiratime tmpfs /farm/porches/70${node}
+#    #mount -t ramfs -o size=110G,mpol=bind:${node},noatime,nodiratime ramfs /farm/porches/70${node}
+#    #chown -R altendky.altendky /farm/porches/70${node}
+#done
 
 mkdir -p /var/lib/prometheus/node-exporter
 chown altendky.altendky /var/lib/prometheus/node-exporter
