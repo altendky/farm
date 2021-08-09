@@ -62,10 +62,11 @@ archiving:
    index: 0
    env:
      # me
-     site_root: /farm/sites
+     # site_root: /farm/sites
+     # path_suffix: pool.xch1ph3flzr053eswzjc72gjvxjes6fcdamvl9kq5yqw6dnmwtpmlzkq8lzjmn
      # them
-     # site_root: /farm/them
-     path_suffix: pool.xch1ph3flzr053eswzjc72gjvxjes6fcdamvl9kq5yqw6dnmwtpmlzkq8lzjmn
+     site_root: /farm/them
+     path_suffix: pool.xch1r5prklrfzrzdfsrs7vcwez7psnxp2mpeay6el7sctl2ue74ekglqh5m054
 
 #  target: rsyncd
 #  index: 1
@@ -146,12 +147,13 @@ scheduling:
 # https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference#create
 plotting:
     # me
-    farmer_pk: b0a374845f4f4d6eab62fc4c5e17965d82ad7eee105818e5bd0cfcb46275a16acc4cd30955779bec841a716473416b21
+    # farmer_pk: b0a374845f4f4d6eab62fc4c5e17965d82ad7eee105818e5bd0cfcb46275a16acc4cd30955779bec841a716473416b21
     # pool_pk: a55d8fdada643a43d86a889c2c746ce848c0e2d00f7c012fc4c6e77d1e2f9f54a99dd38af59f8284f2178b810ecc7a95
-    pool_contract_address: xch1ph3flzr053eswzjc72gjvxjes6fcdamvl9kq5yqw6dnmwtpmlzkq8lzjmn
+    # pool_contract_address: xch1ph3flzr053eswzjc72gjvxjes6fcdamvl9kq5yqw6dnmwtpmlzkq8lzjmn
     # them
-    # farmer_pk: 8945f17a3017b39fe6f00b6c3746a3048271322cf86cb86719fd4f4056f0f0c13090c2448aa58dc1aafbda865a37b6cc
+    farmer_pk: 8945f17a3017b39fe6f00b6c3746a3048271322cf86cb86719fd4f4056f0f0c13090c2448aa58dc1aafbda865a37b6cc
     # pool_pk: a94bdc58cb04fc158d7f6aebf11f8c38632018af054ba36137cafac5755afd74b5f935a7001312c755181d3af35d9bfa
+    pool_contract_address: xch1r5prklrfzrzdfsrs7vcwez7psnxp2mpeay6el7sctl2ue74ekglqh5m054
     type: madmax
     chia:
         x: False
@@ -166,3 +168,4 @@ plotting:
     madmax:
         executable: /farm/chia-plotter/build/chia_plot
         n_threads: 16
+        #n_buckets: 512
