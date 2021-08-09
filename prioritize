@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for pid in $(ps ax -o pid,ni,cmd | grep -v chia_plot | grep chia_ | sed 's/\s.*//'); do
+    renice --priority -10 --pid $pid
+done
