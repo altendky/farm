@@ -1,23 +1,23 @@
 # 12TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/e8a73a03-6045-4459-8c6b-6e2fc1523a42 /farm/sites/001 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/e8a73a03-6045-4459-8c6b-6e2fc1523a42 /farm/sites/001 ext4 defaults,noatime,nofail,rw 0 0
 # 12TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/47d4be11-266c-400f-a3cb-9501b970c875 /farm/sites/002 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/47d4be11-266c-400f-a3cb-9501b970c875 /farm/sites/002 ext4 defaults,noatime,nofail,rw 0 0
 # 12TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/a9c0321d-7079-4ab5-b0b7-544575c4842a /farm/sites/003 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/a9c0321d-7079-4ab5-b0b7-544575c4842a /farm/sites/003 ext4 defaults,noatime,nofail,rw 0 0
 # 12TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/1cf287da-b871-4bb4-9deb-c4aebe767ec2 /farm/sites/004 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/1cf287da-b871-4bb4-9deb-c4aebe767ec2 /farm/sites/004 ext4 defaults,noatime,nofail,rw 0 0
 # 18TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/40ecbfa3-8d19-4ad9-94aa-fc133ea56c27 /farm/sites/005 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/40ecbfa3-8d19-4ad9-94aa-fc133ea56c27 /farm/sites/005 ext4 defaults,noatime,nofail,rw 0 0
 # 14TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/3e4df794-7aaf-4608-8704-cf0327a16919 /farm/sites/006 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/3e4df794-7aaf-4608-8704-cf0327a16919 /farm/sites/006 ext4 defaults,noatime,nofail,rw 0 0
 # 14TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/4d609742-923d-45a6-beba-47cd8e1a3d65 /farm/sites/007 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/4d609742-923d-45a6-beba-47cd8e1a3d65 /farm/sites/007 ext4 defaults,noatime,nofail,rw 0 0
 # 10TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/bc7d2cd7-3c65-4848-b7ed-f7990c32491c /farm/sites/008 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/bc7d2cd7-3c65-4848-b7ed-f7990c32491c /farm/sites/008 ext4 defaults,noatime,nofail,rw 0 0
 # 10TB Western Digital 3.5" Elements USB platter
-/dev/disk/by-uuid/c3aec3ab-8396-4d33-ae60-40b2abf1e4f9 /farm/sites/009 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/c3aec3ab-8396-4d33-ae60-40b2abf1e4f9 /farm/sites/009 ext4 defaults,noatime,nofail,rw 0 0
 # 10TB Western Digital Red Plus 3.5" internal platter s/n VCHN4P1P
-/dev/disk/by-uuid/11a21d35-475e-47c4-8bb4-e3c5ce143ed4 /farm/sites/013 ext4 defaults,noatime,nofail,ro 0 0
+/dev/disk/by-uuid/11a21d35-475e-47c4-8bb4-e3c5ce143ed4 /farm/sites/013 ext4 defaults,noatime,nofail,rw 0 0
 # 18TB WD DC HC550 3.5" internal platter s/n 3WHVZLDJ
 /dev/disk/by-uuid/27f716cd-a813-46e5-9741-4cf8f2d30d9c /farm/sites/022 ext4 defaults,noatime,nofail,rw 0 0
 # 18TB WD DC HC550 3.5" internal platter s/n 3GG3NM8E
