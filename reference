@@ -29,4 +29,4 @@ for pair in (df --output=target,source | sed 1d | grep /farm/sites | sort); set 
 while true; for pair in (df --output=target,source | sed 1d | grep /farm/sites | sort); set mount (echo $pair | awk '{print $1}'); set disk (echo $pair | awk '{print $2}'); set date (date --iso-8601=n); echo --- $mount $disk    $date; head --bytes 500 (ls $mount/**/*.plot | shuf --head-count 1) > /dev/null; end; echo; sleep (math '5*60'); end
 
 bash -c 'echo \# --- $(date --iso-8601=s) >> /etc/fstab && cat fstab >> /etc/fstab'
-for d in $(df -h | grep -E '/farm/(sites|back40)' | sed 's/.*% //' | sort); do echo -n "$d  "; ls $d/pool.xch* | wc -l; done
+for d in $(df -h | grep -E '/farm/(sites|back40)' | sed 's/.*% //' | sort); do echo "$d  " p-$(ls $d/pool.xch* | wc -l) o-$(ls $d/original | wc -l); done
