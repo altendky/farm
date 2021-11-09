@@ -81,6 +81,8 @@
 
 # 1TB Western Digital 2.5" USB platter (bare internal)
 /dev/disk/by-uuid/96e0c15b-9988-45bc-a609-b7123580a516 /farm/wagons/803 ext4 defaults,noatime,nofail 0 0
+# 480GB AData 2.5" SATA Internal
+/dev/disk/by-uuid/c528fa58-161b-4ea3-931b-6ffc66956b3a /farm/yards/909 ext4 defaults,noatime,nofail 0 0
 
 
 # 2TB Inland 2280 Premium NVMe SSD s/n 20121420480440
