@@ -1,5 +1,8 @@
 #!/bin/bash
 
-for plots in /farm/{{sites,back40}/{001..37}/{,plots,original,pool,pool.xch1ph3flzr053eswzjc72gjvxjes6fcdamvl9kq5yqw6dnmwtpmlzkq8lzjmn/},yards/{900..908}}; do
+#for plots in /farm/{{sites,back40}/{001..45}/{,plots,original,pool,pool.xch1ph3flzr053eswzjc72gjvxjes6fcdamvl9kq5yqw6dnmwtpmlzkq8lzjmn/},yards/{900..908}}; do
+for plots in /farm/{{sites,back40}/{001..45}/{pool.xch1ph3flzr053eswzjc72gjvxjes6fcdamvl9kq5yqw6dnmwtpmlzkq8lzjmn/},yards/{900..908}}; do
     chia plots add -d "${plots}"
 done
+
+chia plots add -d "/farm/sites/001/original"
