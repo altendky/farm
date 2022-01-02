@@ -1,0 +1,9 @@
+#!/bin/bash
+
+OUT=$1
+
+while true
+do
+    curl --silent --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.crt --key ~/.chia/mainnet/config/ssl/full_node/private_full_node.key -d '{}' -H "Content-Type: application/json" -X POST https://localhost:8555/get_blockchain_state | jq --compact-output '.["blockchain_state"] | {query_time: (now|todateiso8601), timestamp: (if .peak.timestamp == null then null else (.peak.timestamp|todateiso8601) end), height: .peak.height, sync: .sync}' | tee --append ${OUT}
+    sleep 5
+done
