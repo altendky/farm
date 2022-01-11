@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export CHIA_ROOT=/farm/dev/root
+
+source /farm/dev/chia-blockchain/activate
+
+/farm/dev/chia-blockchain/venv/bin/chia "$@"

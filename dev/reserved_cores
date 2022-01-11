@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sed -i "s/reserved_cores: .*/reserved_cores: ${1}/" /farm/dev/root/config/config.yaml

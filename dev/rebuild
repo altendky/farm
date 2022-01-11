@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -rf /farm/dev/root/*
+/farm/dev/chia init
+/farm/dev/chia init --fix-ssl-permissions
+sed -i 's/"WARNING"/"INFO"/' /farm/dev/root/config/config.yaml
+#sed -i "s/reserved_cores: 2/reserved_cores: $0/" /farm/dev/root/config/config.yaml
+#sed -i 's/daemon_port: 55400/daemon_port: 45400/' /farm/dev/root/config/config.yaml

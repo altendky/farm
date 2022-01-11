@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sed -i "s/sanitizer_mode: .*/sanitizer_mode: True/" /farm/dev/root/config/config.yaml
+sed -i "s/send_uncompact_interval: .*/send_uncompact_interval: 300/" /farm/dev/root/config/config.yaml
+sed -i "s/\bprocess_count: .*/process_count: 30/" /farm/dev/root/config/config.yaml
