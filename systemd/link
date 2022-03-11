@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SCRIPT_DIR=$(cd -- "$(dirname -- "$0")"; pwd)
+
+SYSTEMD_DIR=/usr/local/lib/systemd/system
+
+mkdir -p "${SYSTEMD_DIR}"
+#for SERVICE in $(ls "${SCRIPT_DIR}"/*.{service,target})
+for SERVICE in $(ls "${SCRIPT_DIR}"/*.service)
+do
+    ln -s "${SERVICE}" "${SYSTEMD_DIR}"
+    systemctl enable $(basename "${SERVICE%.service}")
+done
