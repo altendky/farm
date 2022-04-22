@@ -15,15 +15,274 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 2,
+  "id": 6,
   "links": [],
   "panels": [
+    {
+      "aliasColors": {
+        "total (all)": "purple",
+        "total (ram)": "blue",
+        "total (swap)": "orange",
+        "used (all)": "red",
+        "used (ram)": "green",
+        "used (swap)": "yellow"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "full node",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 21,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "total (ram)",
+          "fill": 0
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes",
+          "interval": "",
+          "legendFormat": "used (ram)",
+          "refId": "A"
+        },
+        {
+          "expr": "node_memory_MemTotal_bytes",
+          "interval": "",
+          "legendFormat": "total (ram)",
+          "refId": "B"
+        },
+        {
+          "expr": "node_memory_SwapTotal_bytes - node_memory_SwapFree_bytes",
+          "interval": "",
+          "legendFormat": "used (swap)",
+          "refId": "C"
+        },
+        {
+          "expr": "node_memory_SwapTotal_bytes",
+          "interval": "",
+          "legendFormat": "total (swap)",
+          "refId": "D"
+        },
+        {
+          "expr": "(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) + (node_memory_SwapTotal_bytes - node_memory_SwapFree_bytes)",
+          "interval": "",
+          "legendFormat": "used (all)",
+          "refId": "F"
+        },
+        {
+          "expr": "node_memory_MemTotal_bytes + node_memory_SwapTotal_bytes",
+          "interval": "",
+          "legendFormat": "total (all)",
+          "refId": "E"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "memory",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "full node",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 20,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "total (ram)",
+          "fill": 0
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes",
+          "interval": "",
+          "legendFormat": "used (ram)",
+          "refId": "A"
+        },
+        {
+          "expr": "node_memory_MemTotal_bytes",
+          "interval": "",
+          "legendFormat": "total (ram)",
+          "refId": "B"
+        },
+        {
+          "expr": "(node_memory_MemTotal_bytes + node_memory_SwapTotal_bytes) - (node_memory_MemAvailable_bytes + node_memory_SwapFree_bytes)",
+          "interval": "",
+          "legendFormat": "used (all)",
+          "refId": "C"
+        },
+        {
+          "expr": "node_memory_MemTotal_bytes + node_memory_SwapTotal_bytes",
+          "interval": "",
+          "legendFormat": "total (all)",
+          "refId": "D"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "memory - probably not good",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "down": "red",
+        "not synced": "yellow"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "full node",
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -36,7 +295,171 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 0
+        "y": 8
+      },
+      "hiddenSeries": false,
+      "id": 6,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "not synced",
+          "fillGradient": 5,
+          "linewidth": 3,
+          "yaxis": 1,
+          "zindex": -1
+        },
+        {
+          "alias": "height",
+          "yaxis": 2,
+          "zindex": 1
+        },
+        {
+          "alias": "signage points",
+          "fill": 0,
+          "zindex": 2
+        },
+        {
+          "alias": "blocks",
+          "fill": 0,
+          "zindex": 3
+        },
+        {
+          "alias": "down",
+          "fillGradient": 5,
+          "linewidth": 3
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "chia_full_node_node_height",
+          "interval": "",
+          "legendFormat": "height",
+          "refId": "A"
+        },
+        {
+          "expr": "((chia_full_node_node_synced == bool 0 and on () (chia_full_node_node_synced == 0)) * 0.8) + 0.6",
+          "interval": "",
+          "legendFormat": "not synced",
+          "refId": "B"
+        },
+        {
+          "expr": "rate(chia_full_node_total_signage_points and on () (chia_full_node_node_synced == 1)[5m:]) * (18.75) / 2",
+          "interval": "",
+          "legendFormat": "signage points",
+          "refId": "C"
+        },
+        {
+          "expr": "rate(chia_full_node_node_height and on () (chia_full_node_node_synced == 1)[10m:]) * 18.75",
+          "interval": "",
+          "legendFormat": "blocks",
+          "refId": "E"
+        },
+        {
+          "expr": "(absent(vector(1.1) and on () (increase(node_time_seconds[30s]) > 0)) * 0.8) + 0.6",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "legendFormat": "down",
+          "refId": "D"
+        },
+        {
+          "expr": "absent(vector(1.1) and on () (increase(node_time_seconds[30s]) > 0))",
+          "hide": true,
+          "interval": "",
+          "legendFormat": "seconds",
+          "refId": "F"
+        },
+        {
+          "expr": "absent(vector(1.1) and on () (increase(node_time_seconds[30s]) > 0))",
+          "hide": true,
+          "interval": "",
+          "legendFormat": "absent",
+          "refId": "G"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "node",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 2,
+          "format": "percentunit",
+          "label": "",
+          "logBase": 1,
+          "max": "1.5",
+          "min": "0.5",
+          "show": true
+        },
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "full node",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
       },
       "hiddenSeries": false,
       "id": 8,
@@ -65,9 +488,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (plot_id) (plotman_plot_phase_major_minor)",
+          "expr": "chia_full_node_connection_count",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{node_type}}",
           "refId": "A"
         }
       ],
@@ -75,7 +498,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "plot phase",
+      "title": "connections",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -91,12 +514,11 @@
       },
       "yaxes": [
         {
-          "decimals": 0,
           "format": "short",
-          "label": "",
+          "label": null,
           "logBase": 1,
-          "max": "4.2",
-          "min": "-0.2",
+          "max": null,
+          "min": null,
           "show": true
         },
         {
@@ -118,7 +540,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "chia",
+      "datasource": "full node",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -130,11 +552,12 @@
       "gridPos": {
         "h": 8,
         "w": 12,
-        "x": 12,
-        "y": 0
+        "x": 0,
+        "y": 16
       },
       "hiddenSeries": false,
-      "id": 16,
+      "id": 2,
+      "interval": "1s",
       "legend": {
         "avg": false,
         "current": false,
@@ -154,23 +577,73 @@
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
-      "seriesOverrides": [],
+      "seriesOverrides": [
+        {
+          "alias": "frequency",
+          "fill": 0,
+          "yaxis": 1,
+          "zindex": -1
+        },
+        {
+          "alias": "usage",
+          "fill": 3,
+          "yaxis": 2,
+          "zindex": 1
+        },
+        {
+          "alias": "/filtered/",
+          "linewidth": 3,
+          "zindex": 1
+        },
+        {
+          "alias": "/usage /",
+          "fill": 0,
+          "yaxis": 2
+        }
+      ],
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (plot_id) (plotman_plot_phase_major_minor)",
+          "expr": "3 * avg (irate(node_cpu_seconds_total{mode=~'(user|nice|system)'}[1m]))",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "usage",
           "refId": "A"
+        },
+        {
+          "expr": "avg (node_cpu_scaling_frequency_hertz)",
+          "hide": true,
+          "interval": "",
+          "legendFormat": "frequency",
+          "refId": "B"
+        },
+        {
+          "expr": "3 * avg (rate(node_cpu_seconds_total{mode=~'(user|nice|system)'}[15m]))",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "usage (filtered)",
+          "refId": "C"
+        },
+        {
+          "expr": "sum by (cpu) (irate(node_cpu_seconds_total{mode=~'(user|nice|system)'}[1m]))",
+          "hide": true,
+          "interval": "",
+          "legendFormat": "usage ({{cpu}})",
+          "refId": "D"
+        },
+        {
+          "expr": "node_load1",
+          "interval": "",
+          "legendFormat": "load average (1m)",
+          "refId": "E"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "plot phase",
+      "title": "cpu",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -186,20 +659,21 @@
       },
       "yaxes": [
         {
-          "decimals": 0,
+          "decimals": null,
           "format": "short",
           "label": "",
           "logBase": 1,
-          "max": "4.2",
-          "min": "-0.2",
+          "max": null,
+          "min": null,
           "show": true
         },
         {
-          "format": "short",
+          "decimals": null,
+          "format": "percentunit",
           "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
+          "max": "1",
+          "min": "0",
           "show": true
         }
       ],
@@ -213,7 +687,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "full node",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -226,8 +700,8 @@
       "gridPos": {
         "h": 8,
         "w": 12,
-        "x": 0,
-        "y": 8
+        "x": 12,
+        "y": 16
       },
       "hiddenSeries": false,
       "id": 10,
@@ -251,9 +725,8 @@
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
-        {},
         {
-          "alias": "Value",
+          "alias": "xch",
           "yaxis": 2
         }
       ],
@@ -262,35 +735,23 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "3 * avg (irate(node_cpu_seconds_total{cpu=~'(0|1|2|3|4|5|6|7|16|17|18|19|20|21|22|23)', mode=~'(user|nice|system)'}[1m]))",
+          "expr": "chia_wallet_confirmed_balance{wallet_id=\"1\"} / 1000000000000",
           "interval": "",
-          "legendFormat": "Node 0",
+          "legendFormat": "xch",
           "refId": "A"
         },
         {
-          "expr": "3 * avg (irate(node_cpu_seconds_total{cpu=~'(8|9|10|11|12|13|14|15|24|25|26|27|28|29|30|31)', mode=~'(user|nice|system)'}[1m]))",
+          "expr": "chia_wallet_unspent_coin_count{wallet_id=\"1\"}",
           "interval": "",
-          "legendFormat": "Node 1",
+          "legendFormat": "coins",
           "refId": "B"
-        },
-        {
-          "expr": "3 * avg (irate(node_cpu_seconds_total{mode=~'(user|nice|system)'}[1m]))",
-          "interval": "",
-          "legendFormat": "All",
-          "refId": "C"
-        },
-        {
-          "expr": "avg (node_cpu_scaling_frequency_hertz)",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "D"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "CPU % by socket",
+      "title": "balance",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -306,17 +767,18 @@
       },
       "yaxes": [
         {
-          "decimals": null,
-          "format": "percentunit",
+          "decimals": 2,
+          "format": "none",
           "label": null,
           "logBase": 1,
-          "max": "1",
-          "min": "0",
+          "max": null,
+          "min": null,
           "show": true
         },
         {
-          "format": "hertz",
-          "label": null,
+          "decimals": 2,
+          "format": "short",
+          "label": "",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -333,7 +795,8 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "chia",
+      "datasource": "full node",
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -345,11 +808,11 @@
       "gridPos": {
         "h": 8,
         "w": 12,
-        "x": 12,
-        "y": 8
+        "x": 0,
+        "y": 24
       },
       "hiddenSeries": false,
-      "id": 15,
+      "id": 12,
       "legend": {
         "avg": false,
         "current": false,
@@ -371,8 +834,8 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "Value",
-          "yaxis": 2
+          "alias": "mempool",
+          "fill": 0
         }
       ],
       "spaceLength": 10,
@@ -380,15 +843,15 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "3 * avg by (instance) (irate(node_cpu_seconds_total{mode=~'(user|nice|system)'}[1m]))",
+          "expr": "chia_full_node_block_cost / chia_full_node_block_max_cost",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "block",
           "refId": "A"
         },
         {
-          "expr": "avg (node_cpu_scaling_frequency_hertz)",
+          "expr": "chia_full_node_mempool_cost / chia_full_node_mempool_max_total_cost",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "mempool",
           "refId": "B"
         }
       ],
@@ -396,7 +859,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Panel Title",
+      "title": "cost",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -421,7 +884,7 @@
           "show": true
         },
         {
-          "format": "hertz",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -435,11 +898,106 @@
       }
     },
     {
+      "cards": {
+        "cardPadding": 0,
+        "cardRound": 0
+      },
+      "color": {
+        "cardColor": "#b4ff00",
+        "colorScale": "sqrt",
+        "colorScheme": "interpolateCool",
+        "exponent": 0.5,
+        "max": null,
+        "min": null,
+        "mode": "spectrum"
+      },
+      "dataFormat": "timeseries",
+      "datasource": "full node",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 24
+      },
+      "heatmap": {},
+      "hideZeroBuckets": false,
+      "highlightCards": true,
+      "id": 16,
+      "legend": {
+        "show": true
+      },
+      "pluginVersion": "7.0.0",
+      "reverseYBuckets": false,
+      "targets": [
+        {
+          "expr": "smartmon_device_smart_healthy",
+          "hide": true,
+          "interval": "",
+          "legendFormat": "health - {{disk}}",
+          "refId": "A"
+        },
+        {
+          "expr": "smartmon_temperature_celsius_raw_value",
+          "interval": "",
+          "legendFormat": "temp - {{disk}}",
+          "refId": "B"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "disks",
+      "tooltip": {
+        "show": true,
+        "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+        "show": true
+      },
+      "xBucketNumber": null,
+      "xBucketSize": "1m",
+      "yAxis": {
+        "decimals": null,
+        "format": "celsius",
+        "logBase": 1,
+        "max": null,
+        "min": null,
+        "show": true,
+        "splitFactor": null
+      },
+      "yBucketBound": "auto",
+      "yBucketNumber": null,
+      "yBucketSize": 1
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "full node",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -452,10 +1010,10 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 16
+        "y": 32
       },
       "hiddenSeries": false,
-      "id": 13,
+      "id": 14,
       "legend": {
         "avg": false,
         "current": false,
@@ -481,33 +1039,17 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(node_disk_read_bytes_total{device=\"md0\"}[1m])",
-          "hide": false,
+          "expr": "node_hwmon_temp_celsius",
           "interval": "",
-          "legendFormat": "read",
-          "refId": "B"
-        },
-        {
-          "expr": "irate(node_disk_written_bytes_total{device=\"md0\"}[1m])",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "write",
-          "refId": "C"
-        },
-        {
-          "expr": "sum(irate(node_disk_read_bytes_total{device=\"md0\"}[1m]) + irate(node_disk_written_bytes_total{device=\"md0\"}[1m]))",
-          "hide": true,
-          "instant": false,
-          "interval": "",
-          "legendFormat": "both",
-          "refId": "D"
+          "legendFormat": "{{sensor}}",
+          "refId": "A"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Panel Title",
+      "title": "temperature",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -523,7 +1065,7 @@
       },
       "yaxes": [
         {
-          "format": "Bps",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -549,20 +1091,20 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "chia",
+      "datasource": "full node",
       "fieldConfig": {
         "defaults": {
           "custom": {}
         },
         "overrides": []
       },
-      "fill": 1,
+      "fill": 0,
       "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 16
+        "y": 32
       },
       "hiddenSeries": false,
       "id": 18,
@@ -591,33 +1133,17 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(node_disk_read_bytes_total{device=\"nvme0n1\"}[1m])",
-          "hide": false,
+          "expr": "smartmon_temperature_celsius_raw_value",
           "interval": "",
-          "legendFormat": "read",
-          "refId": "B"
-        },
-        {
-          "expr": "irate(node_disk_written_bytes_total{device=\"nvme0n1\"}[1m])",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "write",
-          "refId": "C"
-        },
-        {
-          "expr": "sum(irate(node_disk_read_bytes_total{device=\"nvme0n1\"}[1m]) + irate(node_disk_written_bytes_total{device=\"nvme0n1\"}[1m]))",
-          "hide": true,
-          "instant": false,
-          "interval": "",
-          "legendFormat": "both",
-          "refId": "D"
+          "legendFormat": "{{disk}}",
+          "refId": "A"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Panel Title",
+      "title": "disks - individual",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -633,7 +1159,7 @@
       },
       "yaxes": [
         {
-          "format": "Bps",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -659,7 +1185,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "full node",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -670,312 +1196,13 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 24
-      },
-      "hiddenSeries": false,
-      "id": 4,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "node_filesystem_size_bytes{mountpoint=\"/farm/yards/907\"} - node_filesystem_free_bytes{mountpoint=\"/farm/yards/907\"}\n",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        },
-        {
-          "expr": "node_filesystem_size_bytes{mountpoint=\"/farm/porches/700\"} - node_filesystem_free_bytes{mountpoint=\"/farm/porches/700\"}\n",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "B"
-        },
-        {
-          "expr": "node_filesystem_size_bytes{mountpoint=\"/farm/porches/701\"} - node_filesystem_free_bytes{mountpoint=\"/farm/porches/701\"}",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "C"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "tmp usage",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "chia",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 24
-      },
-      "hiddenSeries": false,
-      "id": 17,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "node_filesystem_size_bytes{mountpoint=\"/farm/yards/900\"} - node_filesystem_free_bytes{mountpoint=\"/farm/yards/900\"}\n",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "tmp usage",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 32
-      },
-      "hiddenSeries": false,
-      "id": 11,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "avg by (instance,mode) (irate(node_cpu_seconds_total{cpu='0', mode!='idle'}[1m]))",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        },
-        {
-          "expr": "avg by (instance,mode) (irate(node_cpu_seconds_total{cpu='8', mode!='idle'}[1m]))",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "B"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "0/8",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 9,
         "w": 12,
         "x": 0,
         "y": 40
       },
       "hiddenSeries": false,
-      "id": 2,
+      "id": 4,
+      "interval": "1",
       "legend": {
         "avg": false,
         "current": false,
@@ -1001,17 +1228,23 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg by (instance,mode) (irate(node_cpu_seconds_total{mode!='idle'}[1m]))",
+          "expr": "irate(node_disk_read_bytes_total{device=\"mmcblk0\"}[1m])",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "system",
           "refId": "A"
+        },
+        {
+          "expr": "irate(node_disk_read_bytes_total{device=\"sda\"}[1m])",
+          "interval": "",
+          "legendFormat": "chia",
+          "refId": "B"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Panel Title",
+      "title": "disk",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1027,7 +1260,7 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "format": "decbytes",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1049,7 +1282,7 @@
       }
     }
   ],
-  "refresh": "1m",
+  "refresh": "30s",
   "schemaVersion": 25,
   "style": "dark",
   "tags": [],
@@ -1073,8 +1306,8 @@
       "1d"
     ]
   },
-  "timezone": "",
-  "title": "New dashboard Copy",
-  "uid": "CQRSBlmnz",
-  "version": 43
+  "timezone": "utc",
+  "title": "Full Node",
+  "uid": "WVIg2tLnz",
+  "version": 47
 }
