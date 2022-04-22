@@ -5,7 +5,7 @@ Description=Chia exporter
 Type=simple
 Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 Environment=CHIA_ROOT=/home/ubuntu/.chia/mainnet
-ExecStart=/farm/chia-exporter/bin/chia-exporter
+ExecStart=/farm/chia-exporter/bin/chia-exporter serve
 User=ubuntu
 Group=ubuntu
 
