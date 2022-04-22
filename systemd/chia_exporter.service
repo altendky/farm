@@ -1,0 +1,13 @@
+[Unit]
+Description=Chia exporter
+
+[Service]
+Type=simple
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=CHIA_ROOT=/home/ubuntu/.chia/mainnet
+ExecStart=/farm/chia-exporter/bin/chia-exporter
+User=ubuntu
+Group=ubuntu
+
+[Install]
+WantedBy=multi-user.target
