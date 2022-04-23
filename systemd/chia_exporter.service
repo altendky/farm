@@ -5,7 +5,10 @@ Description=Chia exporter
 Type=simple
 Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 Environment=CHIA_ROOT=/home/ubuntu/.chia/mainnet
-ExecStart=/farm/chia-exporter/bin/chia-exporter serve
+ExecStart=bash -c '(while true; do if journalctl --unit chia_exporter.service --since "20 second ago" | grep -ve "^-- .* --$"; then systemd-notify "WATCHDOG=1"; fi; sleep 15; done) &> /dev/null & trap "kill -9 $!" EXIT; /farm/chia-exporter/bin/chia-exporter serve'
+WatchdogSec=30
+NotifyAccess=all
+Restart=always
 User=ubuntu
 Group=ubuntu
 
