@@ -1,10 +1,11 @@
 [Unit]
 Description=Chia
-
-[Install]
-WantedBy=multi-user.target
 Wants=chia_daemon.service
 Wants=chia_node.service
 Wants=chia_farmer.service
 Wants=chia_harvester.service
 Wants=chia_wallet.service
+Wants=chia_exporter.service
+
+[Install]
+WantedBy=multi-user.target
