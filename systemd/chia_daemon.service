@@ -6,6 +6,9 @@ Type=simple
 Environment=PATH=/farm/chia-blockchain/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 Environment=CHIA_ROOT=/home/ubuntu/.chia/mainnet
 ExecStart=/farm/chia-blockchain/venv/bin/python -m chia.daemon.server
+#ExecStart=bash -c '(while true; do if journalctl --unit chia_exporter.service --since "20 second ago" | grep -ve "^-- .* --$"; then systemd-notify "WATCHDOG=1"; fi; sleep 15; done) &> /dev/null & trap "kill -9 $!" EXIT; /farm/chia-blockchain/venv/bin/python -m chia.daemon.server'
+#WatchdogSec=30
+#NotifyAccess=all
 Restart=always
 User=ubuntu
 Group=ubuntu

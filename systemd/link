@@ -6,8 +6,11 @@ SYSTEMD_DIR=/usr/local/lib/systemd/system
 
 mkdir -p "${SYSTEMD_DIR}"
 #for SERVICE in $(ls "${SCRIPT_DIR}"/*.{service,target})
-for SERVICE in $(ls "${SCRIPT_DIR}"/*.service)
+for EXTENSION in service mount
 do
-    ln -s "${SERVICE}" "${SYSTEMD_DIR}"
-    systemctl enable $(basename "${SERVICE%.service}")
+    for SERVICE in $(ls "${SCRIPT_DIR}"/*.${EXTENSION})
+    do
+        ln -s "${SERVICE}" "${SYSTEMD_DIR}"
+        systemctl enable "${SERVICE}"
+    done
 done

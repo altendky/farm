@@ -6,7 +6,8 @@ Type=simple
 Environment=PATH=/farm/chia-blockchain/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 Environment=CHIA_ROOT=/home/ubuntu/.chia/mainnet
 ExecStart=/farm/chia-blockchain/venv/bin/chia_full_node
-ExecStartPost=bash -c 'taskset --pid 2 $(pgrep --exact chia_full_node)'
+#ExecStartPost=bash -c 'sleep 30; taskset --pid 2 $(pgrep --exact chia_full_node)'
+#ExecStartPost=bash -c 'taskset --pid 2 $(systemctl show --property MainPID chia_node --value)'
 Restart=always
 User=ubuntu
 Group=ubuntu
