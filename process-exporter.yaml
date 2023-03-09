@@ -1,0 +1,5 @@
+enabled: true
+process_names:
+- name: "{{.Comm}}"
+  cmdline:
+  - 'chia_.*'
