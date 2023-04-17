@@ -1,0 +1,135 @@
+# 12TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/e8a73a03-6045-4459-8c6b-6e2fc1523a42 /farm/sites/001
+# 12TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/47d4be11-266c-400f-a3cb-9501b970c875 /farm/sites/002
+# 12TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/a9c0321d-7079-4ab5-b0b7-544575c4842a /farm/sites/003
+# 12TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/1cf287da-b871-4bb4-9deb-c4aebe767ec2 /farm/sites/004
+# 18TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/40ecbfa3-8d19-4ad9-94aa-fc133ea56c27 /farm/sites/005
+# 14TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/3e4df794-7aaf-4608-8704-cf0327a16919 /farm/sites/006
+# 14TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/4d609742-923d-45a6-beba-47cd8e1a3d65 /farm/sites/007
+# 10TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/bc7d2cd7-3c65-4848-b7ed-f7990c32491c /farm/sites/008
+# 10TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/c3aec3ab-8396-4d33-ae60-40b2abf1e4f9 /farm/sites/009
+# 18TB Western Digital 3.5" Elements USB platter
+/dev/disk/by-uuid/a1770a60-e0c4-4f2e-a0b1-c2dec69a8a4d /farm/sites/010
+# 2TB Western Digital 2.5" My Passport Ultra USB platter
+/dev/disk/by-uuid/5d1d1539-b36f-4e8c-a0b8-6485605893d0 /farm/sites/011
+# 10TB Western Digital Red Plus 3.5" internal platter s/n VCHN4P1P
+/dev/disk/by-uuid/11a21d35-475e-47c4-8bb4-e3c5ce143ed4 /farm/sites/013
+
+# 4TB HGST 3.5" internal platter s/n NHGALX2Y
+/dev/disk/by-uuid/62f67cea-7188-403b-8d43-21c40c1b4704 /farm/sites/014
+# 4TB HGST 3.5" internal platter s/n NHG9TLZY
+/dev/disk/by-uuid/85c57d03-b8d4-4c50-b493-be92737c0b77 /farm/sites/015
+# 4TB HGST 3.5" internal platter s/n NHGAX5GY
+/dev/disk/by-uuid/23eac117-1b30-49a6-ab44-999fbe7a9f9c /farm/sites/016
+# 4TB HGST 3.5" internal platter s/n NHGARU7Y
+/dev/disk/by-uuid/be9a1859-e46f-47a8-99a2-f3f3a5f6a11b /farm/sites/017
+# 4TB HGST 3.5" internal platter s/n NHGAU1ZY
+/dev/disk/by-uuid/2f5b5f81-04fe-4986-bad9-80f7f3d89760 /farm/sites/018
+# 4TB HGST 3.5" internal platter s/n NHGAEJKY
+/dev/disk/by-uuid/7c4e4c16-048b-4f8c-a92a-4ab05f9f7579 /farm/sites/019
+# 4TB HGST 3.5" internal platter s/n NHGA1EZY
+/dev/disk/by-uuid/931da9d4-cb29-4334-8973-c1b19557a2c3 /farm/sites/020
+# 4TB HGST 3.5" internal platter s/n NHGARGUY
+/dev/disk/by-uuid/2f6dbbd4-31d0-4379-9793-38f6b9241a4b /farm/sites/021
+
+# 18TB WD DC HC550 3.5" internal platter s/n 3WHVZLDJ
+/dev/disk/by-uuid/27f716cd-a813-46e5-9741-4cf8f2d30d9c /farm/sites/022
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG3NM8E
+/dev/disk/by-uuid/d77ad5bb-1dd3-4ccc-8470-67ff7c53b852 /farm/sites/023
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG3LYVE
+/dev/disk/by-uuid/9a20e1ad-8812-4a11-9c34-1fd334073213 /farm/sites/024
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG43ENF
+/dev/disk/by-uuid/eb20b4b1-a98e-49b8-89c4-a2435ffd6aa1 /farm/sites/025
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG43P0F
+/dev/disk/by-uuid/2afd9a80-1e83-4759-813e-5957d5326ab2 /farm/sites/026
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG3DGUE
+/dev/disk/by-uuid/3ff85c9b-2c97-4970-91d3-7dde1cb36f68 /farm/sites/027
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG43A0F
+/dev/disk/by-uuid/c315945f-4977-45c0-8206-24eab9d51535 /farm/sites/028
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG3NT7E
+/dev/disk/by-uuid/b10581a0-14f4-43e8-81c1-251178fdab0e /farm/sites/029
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG38VDE
+/dev/disk/by-uuid/4e08ccde-fc2d-4ca2-aceb-99437e787d24 /farm/sites/030
+# 18TB WD DC HC550 3.5" internal platter s/n 3WHS6GXK
+/dev/disk/by-uuid/c070ba60-8e14-42fe-ad7e-e771f6a4561b /farm/sites/031
+# 18TB WD DC HC550 3.5" internal platter s/n 3WJA258J
+/dev/disk/by-uuid/15e13987-70e3-4258-80ac-2a85c3263f59 /farm/sites/032
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG3NSDE
+/dev/disk/by-uuid/bce1d367-7038-425f-92ca-9338f57df246 /farm/sites/033
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG334EE
+/dev/disk/by-uuid/fa20c9c5-cbe7-4645-b522-ba7c964e151b /farm/sites/034
+# 18TB WD DC HC550 3.5" internal platter s/n 3WKHVXYK
+/dev/disk/by-uuid/9b59b132-1846-4040-a44f-613d07a115aa /farm/sites/035
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG42N0E
+/dev/disk/by-uuid/3a4067a2-5ab2-4274-b838-6e5eb7e07d4c /farm/sites/036
+# 18TB WD DC HC550 3.5" internal platter s/n 3GG32ATE
+/dev/disk/by-uuid/fb7aa9aa-49d9-484d-a9aa-fbe31b35c5e9 /farm/sites/037
+# 18TB WD DC HC550 3.5" internal platter s/n 3WJ84DYL
+/dev/disk/by-uuid/8897e58c-aa5b-4c3e-ae3c-eb0de8a28984 /farm/sites/038
+# 18TB WD DC HC550 3.5" internal platter s/n 3GHGPVHE
+/dev/disk/by-uuid/787d4aaf-42a9-4d7c-98e4-7bdc164c1d3a /farm/sites/039
+# 18TB WD DC HC550 3.5" internal platter s/n 3GH4HUBF
+/dev/disk/by-uuid/bb2d8452-f130-4fef-9227-684150c77175 /farm/sites/040
+# 18TB WD DC HC550 3.5" internal platter s/n 3GHM921E
+/dev/disk/by-uuid/79dcb342-c6c8-4e25-b418-0d1b6c586aae /farm/sites/041
+# 18TB WD DC HC550 3.5" internal platter s/n 3GH74XTE
+/dev/disk/by-uuid/b66468af-3145-4f21-ab8f-593b56a5017d /farm/sites/042
+# 18TB WD DC HC550 3.5" internal platter s/n 3WJP2ZGL
+/dev/disk/by-uuid/753eb1e3-0f01-425f-9f26-14db098f5100 /farm/sites/043
+# 18TB WD DC HC550 3.5" internal platter s/n 3WJHHL6J
+/dev/disk/by-uuid/72fa5747-773a-4653-8686-b1f819b518ba /farm/sites/044
+# 18TB WD DC HC550 3.5" internal platter s/n 3GGT4M0E
+/dev/disk/by-uuid/89e282e2-042a-49ef-97dd-135b5c43d08c /farm/sites/045
+
+# 3TB Seagate Barracuda 3.5" USB platter s/n Z1F3ADNH
+#/dev/disk/by-uuid/93c8a5ba-96d3-4fe9-b659-03b4bb1e8f26 /farm/back40/
+# 2TB Western Digital 2.5" My Passport Ultra USB platter
+#/dev/disk/by-uuid/dc2d9888-65c3-4f4a-aa5d-c6f156df69da /farm/back40/
+# 1TB Western Digital 2.5" USB platter
+/dev/disk/by-uuid/7ed73921-5d7d-433d-9d13-32df00d2911f /farm/back40/012
+
+
+# 12TB Seagate Backup Plus Hub 3.5" USB platter
+#/dev/disk/by-uuid/22FC6FBEFC6F8B3D /farm/them/700 auto defaults,noatime,nofail 0 0
+
+# 1TB Western Digital 2.5" USB platter (bare internal)
+/dev/disk/by-uuid/96e0c15b-9988-45bc-a609-b7123580a516 /farm/wagons/803
+# 480GB AData 2.5" SATA Internal
+/dev/disk/by-uuid/c528fa58-161b-4ea3-931b-6ffc66956b3a /farm/yards/909
+
+
+# 2TB Inland 2280 Premium NVMe SSD s/n 20121420480440
+/dev/disk/by-uuid/f29267f6-d245-4d9f-ae62-d2b1782a1124 /farm/yards/900
+# 1TB Western Digital 2280 Blue SN550 NVMe SSD s/n 201970801167
+/dev/disk/by-uuid/9050da7b-2e32-408d-a933-973bfc7d1373 /farm/yards/901
+# 2TB Inland 2280 Premium NVMe SSD s/n 21033120480086
+/dev/disk/by-uuid/d15d0843-a535-429c-b8b8-99e3169f3374 /farm/yards/902
+
+
+# 4x 1TB Inland 2280 Premium NVMe SSD
+/dev/disk/by-uuid/9312512e-2e23-45e9-9e5c-96d4508def65 /farm/yards/907
+# above is raid of below
+# 1TB Inland 2280 Premium NVMe SSD s/n 21042310240103
+#/dev/disk/by-uuid/aa97bae6-48e7-42ab-b307-c5a00ec39640 /farm/yards/903
+# 1TB Inland 2280 Premium NVMe SSD s/n 21042310240118
+#/dev/disk/by-uuid/4a234dde-160c-4daf-8618-d9f1072b3aaf /farm/yards/904
+# 1TB Inland 2280 Premium NVMe SSD s/n 21050610240921
+#/dev/disk/by-uuid/ /farm/yards/905
+# 1TB Inland 2280 Premium NVMe SSD s/n 21050610240939
+#/dev/disk/by-uuid/ /farm/yards/906
+
+# 2x 500GB Western Digital WD Black SN750 NVMe SSD
+/dev/disk/by-uuid/7a3490e2-1d55-449a-be47-473fd30e811a /farm/yards/908
+# above is raid of below
+# 500GB Western Digital WD Black SN750 NVMe SSD s/n 2017AE800817
+#/dev/disk/by-uuid/ /farm/wagons/804
+# 500GB Western Digital WD Black SN750 NVMe SSD s/n 2017AE802258
+#/dev/disk/by-uuid/ /farm/wagons/805

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+handle () {
+  rest="  $1  ( $0 )"
+  resolved=$(readlink -f "$0")
+  if [ -L "$0" ]
+  then
+    if grep -qs "${resolved}" /proc/mounts 2>&1 >/dev/null
+    then
+      echo "    +   already mounted:${rest}"
+    else
+      echo "  ^         mounting to:${rest}"
+      mkdir -p $1
+      sudo mount $0 $1
+    fi
+  else
+    echo "      ?     not present:${rest}"
+  fi
+}
+
+export -f handle
+
+cat mountains | grep -vE '^ *(#.*)?$' | xargs --max-lines=1 --max-procs=1 bash -c 'handle "$@"'
