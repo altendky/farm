@@ -1,0 +1,14 @@
+[Unit]
+Description=Chia %i
+
+[Service]
+Type=simple
+Environment=PATH=/farm/chia-blockchain/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=CHIA_ROOT=/home/altendky/.chia/mainnet
+ExecStart=/farm/chia-blockchain/venv/bin/chia_%i
+Restart=always
+User=altendky
+Group=altendky
+
+[Install]
+WantedBy=multi-user.target
