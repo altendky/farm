@@ -1,23 +1,68 @@
 #!/bin/bash
 
-handle () {
-  rest="  $1  ( $0 )"
-  resolved=$(readlink -f "$0")
-  if [ -L "$0" ]
+
+handle_one () {
+  disk="$1"
+  mount="$2"
+  rest="  $mount  ( $disk )"
+  resolved=$(readlink -f "$disk")
+  if [ -L "$disk" ]
   then
     if grep -qs "${resolved}" /proc/mounts 2>&1 >/dev/null
     then
       echo "    +   already mounted:${rest}"
     else
       echo "  ^         mounting to:${rest}"
-      mkdir -p $1
-      sudo mount $0 $1
+      mkdir -p $mount
+      sudo mount $disk $mount
     fi
   else
     echo "      ?     not present:${rest}"
   fi
 }
 
-export -f handle
+handle () {
+  cat mountains | grep -vE '^ *(#.*)?$' | xargs --max-lines=1 --max-procs=1 --replace=A bash -c 'handle_one A'
+}
 
-cat mountains | grep -vE '^ *(#.*)?$' | xargs --max-lines=1 --max-procs=1 bash -c 'handle "$@"'
+export -f handle_one
+
+set -o errexit -o pipefail
+
+DAEMON=false
+PERIOD=60
+
+USAGE_TEXT="\
+Usage: $0 [-dp]
+
+  -d                          loop continuously as a daemon
+  -p                          approximate loop period in seconds [${PERIOD}]
+  -h                          display this help and exit
+"
+
+usage() {
+  echo "${USAGE_TEXT}"
+}
+
+while getopts dp:h flag
+do
+  case "${flag}" in
+    d) DAEMON=true;;
+    p) PERIOD=${OPTARG};;
+    h) usage; exit 0;;
+    *) echo; usage; exit 1;;
+  esac
+done
+
+trap "kill 0" INT
+
+if [ "${DAEMON}" = "false" ]
+then
+  handle
+else
+  while true
+  do
+    handle
+    sleep ${PERIOD}
+  done
+fi
